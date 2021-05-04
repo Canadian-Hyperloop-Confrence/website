@@ -2,7 +2,14 @@ import Head from 'next/head'
 import styled from 'styled-components';
 import Button from '../components/Button';
 import PageHeader from '../components/PageHeader';
+import Footer from '../components/Footer';
 
+const PageFooter = styled(Footer)`
+  position: fixed;
+  bottom: 8px;
+  width: 100vw;
+  text-align: center;
+`;
 
 const Body = styled.p`
   font: ${({ theme }) => theme.typography.body.regular};
@@ -27,7 +34,7 @@ const ButtonContainer = styled.div`
   width: 100%;
   flex-wrap: wrap;
   cursor: pointer;
-  ${Button} {
+  button {
     margin-right: 16px;
   }
 `;
@@ -36,6 +43,7 @@ const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 `;
 
 const Content = styled.div`
@@ -87,6 +95,7 @@ export default function Home() {
             </SecondaryButton>
           </ButtonContainer>
         </Content>
+        <PageFooter />
       </FlexContainer>
   );
 }
