@@ -70,6 +70,14 @@ const PrimaryButtonCopy = `Become a Sponsor`;
 const SecondaryButtonCopy = `Team application form`;
 
 export default function Home() {
+  const handleSponsorButtonClicked = () => {
+    window.open('mailto:hello@cahyperloop.ca?subject=Become a Sponsor');
+  }
+
+  const handleTeamButtonClicked = () => {
+    window.open('mailto:hello@cahyperloop.ca?subject=Team Application');
+  }
+
   return (
       <FlexContainer>
         <Head>
@@ -83,12 +91,13 @@ export default function Home() {
           <ButtonContainer>
             <Button
               variant="Primary"
-              onClick={() => alert('hello')}>
+              onClick={handleSponsorButtonClicked}
+            >
               {PrimaryButtonCopy}
             </Button>
             <SecondaryButton
               variant="Secondary"
-              onClick={() => alert('hello')}
+              onClick={handleTeamButtonClicked}
             >
               {SecondaryButtonCopy}
               <img src="/arrow-right.svg"/>
