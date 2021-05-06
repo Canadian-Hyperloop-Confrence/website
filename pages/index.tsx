@@ -67,7 +67,7 @@ relationships by organizing a track focused annual event`;
 const HeaderCopy = `Made in Canada.`;
 
 const PrimaryButtonCopy = `Become a Sponsor`;
-const SecondaryButtonCopy = `Term application form`;
+const SecondaryButtonCopy = `Team application form`;
 
 export default function Home() {
   return (
