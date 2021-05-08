@@ -5,7 +5,7 @@ import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 
 const PageFooter = styled(Footer)`
-  position: fixed;
+  position: absolute;
   bottom: 8px;
   width: 100vw;
   text-align: center;
