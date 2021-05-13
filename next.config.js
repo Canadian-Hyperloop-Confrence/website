@@ -14,7 +14,7 @@ module.exports = {
     return [
       {
         source: '/recruitment',
-        destination: 'https://www.notion.so/waterloop/Canadian-Hyperloop-Conference-Members-Recruitment-Page-ad77b0e7264848308bca2fc0c737c79a',
+        destination: 'https://www.notion.so/Canadian-Hyperloop-Conference-Members-Recruitment-Page-ad77b0e7264848308bca2fc0c737c79a',
         permanent: true,
       }
     ]
