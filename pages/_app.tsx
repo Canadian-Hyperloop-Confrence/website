@@ -1,4 +1,5 @@
-import type { AppProps } from 'next/app'
+import type { AppProps, AppContext } from 'next/app'
+import App from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from '../theme';
 
