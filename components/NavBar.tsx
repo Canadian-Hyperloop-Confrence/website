@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import styled, { css, DefaultTheme, FlattenInterpolation, ThemeProps } from 'styled-components';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const LinkContainer = styled.div`
   height: 100%;
