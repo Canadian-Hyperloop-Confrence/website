@@ -1,5 +1,5 @@
 module.exports = {
-  target: "serverless"
+  target: "serverless",
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
