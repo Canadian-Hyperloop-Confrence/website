@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Heading = styled.div`
   font: ${({ theme }) => theme.typography.body.semiBold};
-  color: ${({ theme }) => theme.palette.chcBlack};
+  color: ${({ theme }) => theme.palette.chcBlackA};
 `;
 
 const Container = styled.div`

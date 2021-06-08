@@ -2,9 +2,10 @@ import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   palette: {
-    chcRed: '#E42B2B',
-    chcWhite: '#FCFCFC',
-    chcBlack: '#36454F',
+    chcRed: '#FF0000',
+    chcWhite: '#FAFAFA',
+    chcBlackA: '#2A3339',
+    chcBlackB: '#36454F',
     greys: {
       1: '#4F4F4F',
       2: '#828282',
@@ -18,17 +19,25 @@ const theme: DefaultTheme = {
   },
   typography: {
     body: {
-      regular: '400 16px Open Sans',
-      semiBold: '600 16px Open Sans',
+      regular: '400 20px Questrial Open Sans',
+      semiBold: '600 20px Questrial Open Sans',
     },
     header: {
-      regular: '400 32px Open Sans',
-      semiBold: '600 32px Open Sans',
+      regular: '400 40px Montserrat Open Sans',
+      semiBold: '600 40px Montserrat Open Sans',
     },
     title: {
-      regular: '400 24px Open Sans',
-      semiBold: '600 24px Open Sans',
+      regular: '400 30px Montserrat Open Sans',
+      semiBold: '600 30px Montserrat Open Sans',
     },
+    nav: {
+      regular: '500 14px Montserrat',
+      semiBold: '700 14px Montserrat',
+    },
+  },
+  constants: {
+    navbarHeight: '56px',
+    footerHeight: '56px',
   }
 };
 

@@ -10,7 +10,8 @@ declare module 'styled-components' {
     palette: {
       chcRed: string,
       chcWhite: string,
-      chcBlack: string,
+      chcBlackA: string,
+      chcBlackB: string,
       greys: Record<1 | 2 | 3 | 4 | 5, string>;
     },
     breakPoints: {
@@ -20,6 +21,8 @@ declare module 'styled-components' {
       header: ITypeface;
       title: ITypeface;
       body: ITypeface;
-    }
+      nav: ITypeface;
+    };
+    constants: Record<string, string>;
   }
 }
