@@ -22,6 +22,7 @@ declare module 'styled-components' {
       title: ITypeface;
       body: ITypeface;
       nav: ITypeface;
+      faq: ITypeface
     };
     constants: Record<string, string>;
   }

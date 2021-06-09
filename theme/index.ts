@@ -34,6 +34,10 @@ const theme: DefaultTheme = {
       regular: '500 14px Montserrat',
       semiBold: '700 14px Montserrat',
     },
+    faq: {
+      regular: '500 20px Montserrat',
+      semiBold: '900 20px Montserrat',
+    }
   },
   constants: {
     navbarHeight: '56px',

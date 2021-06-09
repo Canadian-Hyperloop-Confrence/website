@@ -24,13 +24,7 @@ const HomePage: React.FC = () => {
       <title>Canadian Hyperloop Conference</title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar links={[
-        {
-          label: 'Home',
-          to: '/',
-          selected: true
-        },
-      ]}/>
+      <NavBar  selected="home"/>
       <PageContainer>
         <LandingSlide>
           <Typography variant="header">Canadian</Typography>

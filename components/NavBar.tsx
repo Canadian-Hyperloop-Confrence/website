@@ -12,8 +12,7 @@ const LinkText = styled.p<{selected: boolean}>`
   color: ${({ theme }): string => theme.palette.chcWhite};
   margin-left: 30px;
   ${({ selected }): FlattenInterpolation<ThemeProps<DefaultTheme>> => selected ? css`
-    text-decoration: underline;
-    text-decoration-color: ${({ theme }): string => theme.palette.chcRed};
+    border-bottom: 2px solid ${({ theme }): string => theme.palette.chcRed};
   ` : css``}
 `;
 
@@ -35,20 +34,35 @@ const Container = styled.div`
   left: 0;
 `;
 
+const links: INavLink[] = [
+  {
+    label: 'Home',
+    to: '/',
+  },
+  {
+    label: 'FAQ',
+    to: '/faq',
+  },
+  {
+    label: 'Partners',
+    to: '/partners',
+  }
+];
+
+type TSelected = 'home' | 'faq' | 'partners'
+
 interface Props {
-  links: INavLink[];
+  selected: TSelected
 }
 
-const NavBar: React.FC<Props> = ({ links }) => {
-
-  console.log(links)
+const NavBar: React.FC<Props> = ({ selected }) => {
   return (
     <Container>
       <img src="/chc-logo.svg"/>
       <LinkContainer>
         {links.map((link) => (
           <Link href={link.to}>
-            <LinkText selected={link.selected}>{link.label}</LinkText>
+            <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
           </Link>
         ))}
       </LinkContainer>

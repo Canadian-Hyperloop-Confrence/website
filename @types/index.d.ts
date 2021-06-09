@@ -1,5 +1,4 @@
 interface INavLink {
-  label: string;
-  to: string;
-  selected: boolean;
+  readonly label:  string;
+  readonly to:  string;
 }

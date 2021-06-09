@@ -27,11 +27,14 @@ const Container = styled.div`
   position: relative;
 `;
 
-interface Props {
-  links: INavLink[];
-}
+const links: INavLink[] = [
+  {
+    label: 'FAQ',
+    to: '/faq',
+  },
+];
 
-const Footer: React.FC<Props> = ({ links }) => {
+const Footer: React.FC = () => {
 
   console.log(links)
   return (
