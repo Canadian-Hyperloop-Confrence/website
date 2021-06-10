@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import styled, { css, DefaultTheme, FlattenInterpolation, ThemeProps } from 'styled-components';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import styled, { css, DefaultTheme, FlattenInterpolation, ThemeProps, useTheme } from 'styled-components';
 import Link from 'next/link';
 
 const LinkContainer = styled.div`
@@ -35,6 +35,38 @@ const Container = styled.div`
   left: 0;
 `;
 
+const MobileNavMenuContainer = styled.div<{ open: boolean}>`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width:  100%;
+  height: 100vh;
+  display: ${({ open }) => open ? 'visible' : 'none'};
+
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+`;
+
+const MobileNavMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-right: 10px;
+  padding-top: 10vh;
+
+  background-color: ${({ theme }): string => theme.palette.chcBlackA};
+  opacity: 100%;
+  ${LinkText} {
+    color: ${({ theme }):string => theme.palette.chcWhite};
+    text-align: end;
+  }
+  z-index: 20;
+`;
+
 const links: INavLink[] = [
   {
     label: 'Home',
@@ -64,18 +96,64 @@ interface Props {
   selected: TSelected
 }
 
-const NavBar: React.FC<Props> = ({ selected }) =>  (
-  <Container>
-    <img src="/chc-logo.svg"/>
-    <LinkContainer>
-      {links.map((link, index) => (
-        <Link href={link.to} key={index}>
-          <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
-        </Link>
-      ))}
-    </LinkContainer>
-  </Container>
-);
+const useBreakpoint = (breakpoint: string): boolean => {
+  const [windowWidth, setWindowWidth] = useState<number | undefined>(undefined);
+  useEffect(() => {
+    if (window) {
+      console.log(window.screen.width)
+      window.addEventListener('resize', () => setWindowWidth(window.screen.width));
+    }
+    return function unMount() {
+      if (window) {
+        window.removeEventListener('resize', () => setWindowWidth(window.screen.width));
+      }
+    }
+  }, []);
+  const size = useMemo(() => parseInt(breakpoint.slice(0, breakpoint.length-2), 10), [breakpoint]);
+  return useMemo(() => (windowWidth ? windowWidth >= size : false), [size, windowWidth]);
+}
 
+const NavBar: React.FC<Props> = ({ selected }) =>  {
+  const theme = useTheme();
+  const isDesktop = useBreakpoint(theme.breakPoints.desktop);
+  const [navMenuOpen, setNavMenuOpen] = useState(false);
+
+  const openMenu = useCallback(() => {
+    setNavMenuOpen(true);
+  }, [setNavMenuOpen]);
+
+  const closeMenu = useCallback(() => {
+    setNavMenuOpen(false);
+  }, [setNavMenuOpen]);
+
+  return isDesktop ? (
+    <Container>
+      <img src="/chc-logo.svg"/>
+      <LinkContainer>
+        {links.map((link, index) => (
+          <Link href={link.to} key={index}>
+            <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
+          </Link>
+        ))}
+      </LinkContainer>
+    </Container>
+  ) : (
+    <Container>
+      <img src="/chc-logo.svg"/>
+      <LinkContainer>
+        <img src="/menu.svg" onClick={openMenu}/>
+      </LinkContainer>
+      <MobileNavMenuContainer open={navMenuOpen} onClick={closeMenu}>
+        <MobileNavMenu>
+          {links.map((link, index) => (
+            <Link href={link.to} key={index}>
+              <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
+            </Link>
+          ))}
+        </MobileNavMenu>
+      </MobileNavMenuContainer>
+    </Container>
+  );
+}
 
 export default NavBar;
