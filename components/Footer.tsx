@@ -5,6 +5,7 @@ import Link from 'next/link';
 const LinkContainer = styled.div`
   height: 100%;
   display: flex;
+  cursor: pointer;
 `;
 
 const LinkText = styled.p`
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
       <LinkText>CHC	&#169; 2021</LinkText>
       <LinkContainer>
         {links.map((link) => (
-          <Link href={link.to}>
+          <Link href={link.to} key={link.to}>
             <LinkText>{link.label}</LinkText>
           </Link>
         ))}

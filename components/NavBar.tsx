@@ -6,6 +6,7 @@ const LinkContainer = styled.div`
   height: 100%;
   margin-right: 60px;
   display: flex;
+  cursor: pointer;
 `;
 
 const LinkText = styled.p<{selected: boolean}>`
@@ -46,10 +47,14 @@ const links: INavLink[] = [
   {
     label: 'Partners',
     to: '/partners',
-  }
+  },
+  {
+    label: 'Teams',
+    to: '/teams',
+  },
 ];
 
-type TSelected = 'home' | 'faq' | 'partners'
+type TSelected = 'home' | 'faq' | 'partners' | 'teams'
 
 interface Props {
   selected: TSelected
@@ -60,8 +65,8 @@ const NavBar: React.FC<Props> = ({ selected }) => {
     <Container>
       <img src="/chc-logo.svg"/>
       <LinkContainer>
-        {links.map((link) => (
-          <Link href={link.to}>
+        {links.map((link, index) => (
+          <Link href={link.to} key={index}>
             <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
           </Link>
         ))}

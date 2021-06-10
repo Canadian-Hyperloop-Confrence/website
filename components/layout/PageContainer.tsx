@@ -24,6 +24,9 @@ const PageContainer = styled.div`
     .typography {
       color: ${({ theme }):string => theme.palette.chcWhite};
     }
+    a {
+      color: ${({ theme }): string => theme.palette.blueA};
+    }
   }
 `;
 

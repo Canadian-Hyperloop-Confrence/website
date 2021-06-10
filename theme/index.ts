@@ -6,6 +6,7 @@ const theme: DefaultTheme = {
     chcWhite: '#FAFAFA',
     chcBlackA: '#2A3339',
     chcBlackB: '#36454F',
+    blueA: '#54879D',
     greys: {
       1: '#4F4F4F',
       2: '#828282',
@@ -31,8 +32,8 @@ const theme: DefaultTheme = {
       semiBold: '600 30px Montserrat Open Sans',
     },
     nav: {
-      regular: '500 14px Montserrat',
-      semiBold: '700 14px Montserrat',
+      regular: '600 14px Montserrat',
+      semiBold: '600 14px Montserrat',
     },
     faq: {
       regular: '500 20px Montserrat',
