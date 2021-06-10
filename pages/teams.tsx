@@ -63,7 +63,7 @@ const Ryerson = styled.img`
 `;
 
 const Teams = () => {
-  const renderOurTeam = OurTeam.map((member) => <HeadShot {...member} />)
+  const renderOurTeam = OurTeam.map((member) => <HeadShot key={member.name} {...member} />);
   return (
     <div>
       <Head>
@@ -101,7 +101,7 @@ const Teams = () => {
         <Footer />
       </PageContainer>
     </div>
-  )
+  );
 };
 
 export default Teams;

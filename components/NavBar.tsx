@@ -97,20 +97,20 @@ interface Props {
 }
 
 const useBreakpoint = (breakpoint: string): boolean => {
-  const [windowWidth, setWindowWidth] = useState<number | undefined>(undefined);
+  const [biggerThanBreakPoint, setBiggerThanBreakPoint] = useState<boolean>(false);
+  const [size] = useState<number>(parseInt(breakpoint.slice(0, breakpoint.length-2), 10));
   useEffect(() => {
-    if (window) {
-      console.log(window.screen.width)
-      window.addEventListener('resize', () => setWindowWidth(window.screen.width));
-    }
+    setBiggerThanBreakPoint(window.innerWidth > size);
+    window.addEventListener('resize', () => {
+      setBiggerThanBreakPoint(window.innerWidth > size)
+    });
     return function unMount() {
-      if (window) {
-        window.removeEventListener('resize', () => setWindowWidth(window.screen.width));
-      }
+      window.removeEventListener('resize', () => {
+        setBiggerThanBreakPoint(window.innerWidth > parseInt(breakpoint.slice(0, breakpoint.length-2), 10))
+      });
     }
-  }, []);
-  const size = useMemo(() => parseInt(breakpoint.slice(0, breakpoint.length-2), 10), [breakpoint]);
-  return useMemo(() => (windowWidth ? windowWidth >= size : false), [size, windowWidth]);
+  });
+  return biggerThanBreakPoint;
 }
 
 const NavBar: React.FC<Props> = ({ selected }) =>  {
