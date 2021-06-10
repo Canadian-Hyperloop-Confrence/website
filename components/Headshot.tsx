@@ -27,6 +27,7 @@ const Position = styled.h2`
   margin: 0;
   padding: 0;
   font: 400 20px Questrial;
+  text-align: center;
 `;
 
 const HeadShot = ({ name, position, img }: TeamMemberHeadshot): ReactElement  => {
