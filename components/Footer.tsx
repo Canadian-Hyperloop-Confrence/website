@@ -33,23 +33,23 @@ const links: INavLink[] = [
     label: 'FAQ',
     to: '/faq',
   },
+  {
+    label: 'Contact Us',
+    to: '/contact-us',
+  },
 ];
 
-const Footer: React.FC = () => {
-
-  console.log(links)
-  return (
-    <Container>
-      <LinkText>CHC	&#169; 2021</LinkText>
-      <LinkContainer>
-        {links.map((link) => (
-          <Link href={link.to} key={link.to}>
-            <LinkText>{link.label}</LinkText>
-          </Link>
-        ))}
-      </LinkContainer>
-    </Container>
-  );
-};
+const Footer: React.FC = () => (
+  <Container>
+    <LinkText>CHC	&#169; 2021</LinkText>
+    <LinkContainer>
+      {links.map((link) => (
+        <Link href={link.to} key={link.to}>
+          <LinkText>{link.label}</LinkText>
+        </Link>
+      ))}
+    </LinkContainer>
+  </Container>
+);
 
 export default Footer;

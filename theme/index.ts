@@ -32,12 +32,12 @@ const theme: DefaultTheme = {
       semiBold: '600 30px Montserrat Open Sans',
     },
     nav: {
-      regular: '600 14px Montserrat',
-      semiBold: '600 14px Montserrat',
+      regular: '600 14px Montserrat Open Sans',
+      semiBold: '600 14px Montserrat Open Sans',
     },
     faq: {
-      regular: '500 20px Montserrat',
-      semiBold: '900 20px Montserrat',
+      regular: '500 20px Montserrat Open Sans',
+      semiBold: '900 20px Montserrat Open Sans',
     }
   },
   constants: {

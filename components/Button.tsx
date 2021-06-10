@@ -31,7 +31,7 @@ const Button = styled.button<Props>`
   }}
 
   cursor: pointer;
-  font: ${({ theme }) => theme.typography.body.semiBold};
+  font: 400 16px Questrial;
   border-radius: 4px;
   border-style: solid;
   width: fit-content;

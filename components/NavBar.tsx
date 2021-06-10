@@ -52,27 +52,30 @@ const links: INavLink[] = [
     label: 'Teams',
     to: '/teams',
   },
+  {
+    label: 'Contact Us',
+    to: '/contact-us',
+  },
 ];
 
-type TSelected = 'home' | 'faq' | 'partners' | 'teams'
+type TSelected = 'home' | 'faq' | 'partners' | 'teams' | 'contact us'
 
 interface Props {
   selected: TSelected
 }
 
-const NavBar: React.FC<Props> = ({ selected }) => {
-  return (
-    <Container>
-      <img src="/chc-logo.svg"/>
-      <LinkContainer>
-        {links.map((link, index) => (
-          <Link href={link.to} key={index}>
-            <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
-          </Link>
-        ))}
-      </LinkContainer>
-    </Container>
-  );
-};
+const NavBar: React.FC<Props> = ({ selected }) =>  (
+  <Container>
+    <img src="/chc-logo.svg"/>
+    <LinkContainer>
+      {links.map((link, index) => (
+        <Link href={link.to} key={index}>
+          <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
+        </Link>
+      ))}
+    </LinkContainer>
+  </Container>
+);
+
 
 export default NavBar;
