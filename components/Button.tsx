@@ -15,8 +15,9 @@ const Button = styled.button<Props>`
         return css`
         color: ${props.theme.palette.chcRed};
         background-color: ${props.theme.palette.chcWhite};
-        border-color: ${props.theme.palette.chcWhite};
-        padding: 0;
+        border-color: ${props.theme.palette.chcRed};
+        padding-left: 16px;
+        padding-right: 16px;
         `;
       case "Primary":
       default:

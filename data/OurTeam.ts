@@ -2,57 +2,57 @@ const OurTeam: TeamMemberHeadshot[] = [
   {
     name: 'Christina Suigura',
     position: 'Project Manager',
-    img: '/christina.png'
+    img: '/our-team/christina.png'
   },
   {
     name: 'Dafne Dilbaz',
     position: 'Project Manager',
-    img: '/dafne.png'
+    img: '/our-team/dafne.png'
   },
   {
     name: 'Clive Chan',
     position: 'Advisor',
-    img: '/clive.png'
+    img: '/our-team/clive.png'
   },
   {
     name: 'Jennifer Chen',
     position: 'Advisor',
-    img: '/jennifer.png'
+    img: '/our-team/jennifer.png'
   },
   {
     name: 'Sydney Zhang',
     position: 'Social Media Lead',
-    img: '/sydney.png'
+    img: '/our-team/sydney.png'
   },
   {
     name: 'Quinn Hodges',
     position: 'Lead Web Developer',
-    img: '/quinn.png'
+    img: '/our-team/quinn.png'
   },
   {
     name: 'Lucas Huang',
     position: 'Lead Visual Designer',
-    img: '/lucas.png'
+    img: '/our-team/lucas.png'
   },
   {
     name: 'Krista Porter',
     position: 'Lead Competitions Coordinator',
-    img: '/krista.png'
+    img: '/our-team/krista.png'
   },
   {
     name: 'Nusret Ali Kok',
     position: 'Lead Community Outreach Coordinator',
-    img: '/nusret.png'
+    img: '/our-team/nusret.png'
   },
   {
     name: 'Chloe Bell',
     position: 'Lead Community Events Coordinator',
-    img: '/chloe.png'
+    img: '/our-team/chloe.png'
   },
   {
     name: 'Shaheer Rana',
     position: 'Competitions Technical Lead',
-    img: '/shaheer.png'
+    img: '/our-team/shaheer.png'
   },
 ]
 

@@ -90,12 +90,12 @@ const Teams = () => {
           </Typography>
           <Typography variant="title">Partner Teams</Typography>
           <TeamContainer>
-            <a href="http://www.mcmasterhyperloop.ca/about"><img src="mcmaster.png" alt="Mcmaster University"/></a>
-            <a href="https://teamwaterloop.ca/"><img src="uwaterloo.png" alt="University of Waterloo"/></a>
-            <a href="https://ryersonhyperloop.com/"><Ryerson src="ryerson.png" alt="Ryerson University"/></a>
-            <a href="https://www.utht.ca/"><img src="uot.png" alt="University of Toronto"/></a>
-            <a href="https://queenshyperloop.ca/"><img src="queens.png" alt="Queens University"/></a>
-            <a href="https://www.uwinloop.ca/our-team"><img src="uwindsor.png" alt="University of Windsor"/></a>
+            <a href="http://www.mcmasterhyperloop.ca/about"><img src="teams/mcmaster.png" alt="Mcmaster University"/></a>
+            <a href="https://teamwaterloop.ca/"><img src="teams/uwaterloo.png" alt="University of Waterloo"/></a>
+            <a href="https://ryersonhyperloop.com/"><Ryerson src="teams/ryerson.png" alt="Ryerson University"/></a>
+            <a href="https://www.utht.ca/"><img src="teams/uot.png" alt="University of Toronto"/></a>
+            <a href="https://queenshyperloop.ca/"><img src="teams/queens.png" alt="Queens University"/></a>
+            <a href="https://www.uwinloop.ca/our-team"><img src="teams/uwindsor.png" alt="University of Windsor"/></a>
           </TeamContainer>
         </Section>
         <Footer />
