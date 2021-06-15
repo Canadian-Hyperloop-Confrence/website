@@ -36,17 +36,17 @@ const OurTeam: TeamMemberHeadshot[] = [
   },
   {
     name: 'Krista Porter',
-    position: 'Lead Competitions Coordinator',
+    position: 'Logistics Lead',
     img: '/our-team/krista.png'
   },
   {
     name: 'Nusret Ali Kok',
-    position: 'Lead Community Outreach Coordinator',
+    position: 'Partnerships & Sponsorships Lead',
     img: '/our-team/nusret.png'
   },
   {
     name: 'Chloe Bell',
-    position: 'Lead Community Events Coordinator',
+    position: 'Lead Community Coordinator',
     img: '/our-team/chloe.png'
   },
   {

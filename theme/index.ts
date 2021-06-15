@@ -20,24 +20,24 @@ const theme: DefaultTheme = {
   },
   typography: {
     body: {
-      regular: '400 20px Questrial Open Sans',
-      semiBold: '600 20px Questrial Open Sans',
+      regular: '400 20px Questrial, "Open Sans"',
+      semiBold: '600 20px Questrial, "Open Sans"',
     },
     header: {
-      regular: '400 40px Montserrat Open Sans',
-      semiBold: '600 40px Montserrat Open Sans',
+      regular: '400 40px Montserrat, "Open Sans"',
+      semiBold: '600 40px Montserrat, "Open Sans"',
     },
     title: {
-      regular: '400 30px Montserrat Open Sans',
-      semiBold: '600 30px Montserrat Open Sans',
+      regular: '400 30px Montserrat, "Open Sans"',
+      semiBold: '600 30px Montserrat, "Open Sans"',
     },
     nav: {
-      regular: '600 14px Montserrat Open Sans',
-      semiBold: '600 14px Montserrat Open Sans',
+      regular: '600 14px Montserrat, Open Sans',
+      semiBold: '600 14px Montserrat, Open Sans',
     },
     faq: {
-      regular: '500 20px Montserrat Open Sans',
-      semiBold: '900 20px Montserrat Open Sans',
+      regular: '500 20px Montserrat, Open Sans',
+      semiBold: '900 20px Montserrat, Open Sans',
     }
   },
   constants: {

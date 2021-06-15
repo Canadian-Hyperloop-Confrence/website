@@ -15,6 +15,7 @@ const LinkText = styled.p<{selected: boolean}>`
   ${({ selected }): FlattenInterpolation<ThemeProps<DefaultTheme>> => selected ? css`
     border-bottom: 2px solid ${({ theme }): string => theme.palette.chcRed};
   ` : css``}
+  cursor: pointer;
 `;
 
 

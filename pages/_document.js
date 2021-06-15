@@ -34,9 +34,8 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
