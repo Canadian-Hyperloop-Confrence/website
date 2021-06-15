@@ -5,7 +5,7 @@ const OurTeam: TeamMemberHeadshot[] = [
     img: '/our-team/christina.png'
   },
   {
-    name: 'Dafne Dilbaz',
+    name: 'Defne Dilbaz',
     position: 'Project Manager',
     img: '/our-team/dafne.png'
   },
