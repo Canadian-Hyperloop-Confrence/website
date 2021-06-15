@@ -16,6 +16,7 @@ const LinkText = styled.p<{selected: boolean}>`
     border-bottom: 2px solid ${({ theme }): string => theme.palette.chcRed};
   ` : css``}
   cursor: pointer;
+  font: ${({ theme }): string => theme.typography.nav.regular};
 `;
 
 
