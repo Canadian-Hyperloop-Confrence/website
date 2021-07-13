@@ -19,7 +19,7 @@ const Section = styled(USection)`
 
 const Partners = () => {
   const handleSponsorButtonClicked = () => {
-    window.open('mailto:hello@cahyperloop.ca?subject=Become a Sponsor');
+    window.open('mailto:finance@cahyperloop.ca?subject=Become a Sponsor');
   }
   return (
     <div>
