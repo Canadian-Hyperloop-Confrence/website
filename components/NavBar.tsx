@@ -17,6 +17,7 @@ const LinkText = styled.p<{selected: boolean}>`
   ` : css``}
   cursor: pointer;
   font: ${({ theme }): string => theme.typography.nav.regular};
+  align-self: center;
 `;
 
 
@@ -69,6 +70,14 @@ const MobileNavMenu = styled.div`
   z-index: 20;
 `;
 
+const CHCLogo = styled.img.attrs({
+  src: '/chc-logo-large.svg'
+})`
+  height: 64px;
+  margin-top: 14px;
+  padding-bottom: 14px;
+`;
+
 const links: INavLink[] = [
   {
     label: 'Home',
@@ -90,9 +99,13 @@ const links: INavLink[] = [
     label: 'Contact Us',
     to: '/contact-us',
   },
+  {
+    label: 'Updates',
+    to: '/updates'
+  }
 ];
 
-type TSelected = 'home' | 'faq' | 'partners' | 'teams' | 'contact us'
+type TSelected = 'home' | 'faq' | 'partners' | 'teams' | 'contact us' | 'updates'
 
 interface Props {
   selected: TSelected
@@ -130,7 +143,7 @@ const NavBar: React.FC<Props> = ({ selected }) =>  {
 
   return isDesktop ? (
     <Container>
-      <img src="/chc-logo.svg"/>
+      <CHCLogo/>
       <LinkContainer>
         {links.map((link, index) => (
           <Link href={link.to} key={index}>
@@ -141,7 +154,7 @@ const NavBar: React.FC<Props> = ({ selected }) =>  {
     </Container>
   ) : (
     <Container>
-      <img src="/chc-logo.svg"/>
+      <CHCLogo/>
       <LinkContainer>
         <img src="/menu.svg" onClick={openMenu}/>
       </LinkContainer>

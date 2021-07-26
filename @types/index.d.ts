@@ -8,3 +8,17 @@ interface TeamMemberHeadshot {
   position: string;
   img: string;
 }
+
+// A simple date interface used for displaying dates
+interface SimpleDate {
+  day: number;
+  month: number;
+  year: number;
+}
+
+interface BlogCardData {
+  title: string;
+  imageSrc: string;
+  date: SimpleDate;
+  link: string;
+}
