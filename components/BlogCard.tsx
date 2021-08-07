@@ -39,7 +39,7 @@ const Card = styled.div`
   }
 `;
 
-type BlogCardComponent = (props: BlogCardData & { className: string }) => React.ReactElement
+type BlogCardComponent = (props: BlogCardData & { className?: string }) => React.ReactElement
 
 const BlogCard: BlogCardComponent = ({ title, imageSrc, date, link, className }) => {
 
