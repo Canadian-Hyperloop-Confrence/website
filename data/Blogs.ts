@@ -7,7 +7,7 @@ const blogs: BlogCardData[] =  [
       year: 2021
     },
     imageSrc: '/blogs/clive-blog-1.png',
-    link: 'https://www.notion.so/waterloop/Hyperloop-Talks-with-Clive-Why-Hyperloop-7e137fca45a4462ba2fd9e335912cf79'
+    link: 'https://waterloop.notion.site/Hyperloop-Talks-with-Clive-Why-Hyperloop-b117f447807a4b22bed22e6fda858a65'
   },
   {
     title: 'Hyperloop TT Spotlight',
