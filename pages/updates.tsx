@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { LandingSlide, PageContainer, Section as USection } from "../components/layout";
 import NavBar from "../components/NavBar";
 import Typography from "../components/Typography";
-import BlogCard from '../components/BlogCard';
+import UBlogCard from '../components/BlogCard';
 import Blogs from '../data/Blogs';
 
 const Header = styled(Typography).attrs({
@@ -16,6 +16,10 @@ const Header = styled(Typography).attrs({
 
 const Section = styled(USection)`
   min-height: 740px;
+`;
+
+const BlogCard = styled(UBlogCard)`
+  margin-bottom: 16px;
 `;
 
 const Updates = () => {

@@ -39,16 +39,16 @@ const Card = styled.div`
   }
 `;
 
-type BlogCardComponent = (props: BlogCardData) => React.ReactElement
+type BlogCardComponent = (props: BlogCardData & { className: string }) => React.ReactElement
 
-const BlogCard: BlogCardComponent = ({ title, imageSrc, date, link }) => {
+const BlogCard: BlogCardComponent = ({ title, imageSrc, date, link, className }) => {
 
   const handleGoToBlog = () => {
     window.open(link)
   }
 
   return (
-    <Card onClick={handleGoToBlog}>
+    <Card onClick={handleGoToBlog} className={className}>
       <BlogImage src={imageSrc} />
       <TextContainer>
         <Typography variant="title">{title}</Typography>
