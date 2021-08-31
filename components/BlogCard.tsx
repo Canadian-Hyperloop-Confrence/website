@@ -1,14 +1,16 @@
-import styled from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import Typography from './Typography';
 
 
 const DateText = styled(Typography).attrs({
   variant: 'title'
-})`
+})<{ invertColour: boolean }>`
   ::before {
     content: url('/calendar.svg');
     padding-right: 12px;
     padding-top: 4px;
+
+    ${({ invertColour }): string | FlattenSimpleInterpolation => invertColour ? css`filter: invert(1)` : ''};
   }
 
 `;
@@ -21,8 +23,8 @@ const TextContainer = styled.div`
   flex-direction: column;
 `;
 
-const Card = styled.div`
-  border: 3px solid ${({ theme }): string => theme.palette.chcBlackA};
+const Card = styled.div<{invertBorder: boolean }>`
+  border: 3px solid ${({ theme, invertBorder }): string => invertBorder ? theme.palette.chcWhite : theme.palette.chcBlackA };
   border-radius: 10px;
   max-width: 743px;
   display: flex;
@@ -39,20 +41,20 @@ const Card = styled.div`
   }
 `;
 
-type BlogCardComponent = (props: BlogCardData & { className?: string }) => React.ReactElement
+type BlogCardComponent = (props: BlogCardData & { className?: string; darkBackground?: boolean }) => React.ReactElement
 
-const BlogCard: BlogCardComponent = ({ title, imageSrc, date, link, className }) => {
+const BlogCard: BlogCardComponent = ({ title, imageSrc, date, link, className, darkBackground=false }) => {
 
   const handleGoToBlog = () => {
     window.open(link)
   }
 
   return (
-    <Card onClick={handleGoToBlog} className={className}>
+    <Card onClick={handleGoToBlog} className={className} invertBorder={darkBackground}>
       <BlogImage src={imageSrc} />
       <TextContainer>
         <Typography variant="title">{title}</Typography>
-        <DateText>{date.month > 9 ? date.month : `0${date.month}`}/{date.day > 9 ? date.day : `0${date.day}` }/{date.year}</DateText>
+        <DateText invertColour={darkBackground}>{date.month > 9 ? date.month : `0${date.month}`}/{date.day > 9 ? date.day : `0${date.day}` }/{date.year}</DateText>
       </TextContainer>
     </Card>
   )

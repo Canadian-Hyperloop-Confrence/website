@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar";
 import Typography from "../components/Typography";
 import UBlogCard from '../components/BlogCard';
 import Blogs from '../data/Blogs';
+import Videos from '../data/Videos';
 
 const Header = styled(Typography).attrs({
   variant: 'header'
@@ -24,6 +25,7 @@ const BlogCard = styled(UBlogCard)`
 
 const Updates = () => {
   const renderBlogCards = Blogs.map((blog) => <BlogCard {...blog}/> );
+  const renderVideoCards = Videos.map((video) => <BlogCard darkBackground {...video} />);
   return (
     <div>
       <Head>
@@ -38,6 +40,10 @@ const Updates = () => {
         <Section>
           <Typography variant="title">Blogs</Typography>
           {renderBlogCards}
+        </Section>
+        <Section>
+          <Typography variant="title">Youtube Videos</Typography>
+          {renderVideoCards}
         </Section>
         <Footer />
       </PageContainer>
