@@ -98,6 +98,13 @@ const BackToTop = styled.div`
   transition: bottom 0.5s;
 `;
 
+const CalendarSpan = styled.span`
+  display: flex;
+  p {
+    padding-left: 8px;
+  }
+`;
+
 const VirtualShowCase = () => {
   const [showScrollToTop, setShowScrollToTop] = useState<'hide' | 'show'>('hide');
 
@@ -148,23 +155,24 @@ const VirtualShowCase = () => {
           ]} />
           <div id="eligibility">
             <H1>Eligibility</H1>
-            <P>To be eligible for the Virtual Showcase, teams must adhere to the following requirements:
+            <P>
+              To be eligible for the Virtual Showcase, teams must adhere to the following requirements:
+            </P>
               <ol>
-                <li>Only student teams composed of undergraduate and graduate students enrolled as of the initial registration deadline are permitted to compete. Members outside this category may only hold advisory roles and are subject to all the regulations in Criterion 2.</li>
-                <li>Advisors are permitted and encouraged to attend the Virtual Showcase but cannot: Answer questions during technical interviews with the Canadian Hyperloop Conference on behalf of the team.
+                <li><P>Only student teams composed of undergraduate and graduate students enrolled as of the initial registration deadline are permitted to compete. Members outside this category may only hold advisory roles and are subject to all the regulations in Criterion 2.</P></li>
+                <li><P>Advisors are permitted and encouraged to attend the Virtual Showcase but cannot: Answer questions during technical interviews with the Canadian Hyperloop Conference on behalf of the team.
 Be a lead contributor to the manufacturing, designing, or engineering of any components, systems, or modules.
 Directly edit, write, or create any content in team documents, presentations, or schematics submitted to the Canadian Hyperloop Conference.
-Lead administrative or logistical duties such as finances, member recruitment, registration, and team planning.</li>
-                <li>Teams should submit work in English and prepare to present in English.</li>
+Lead administrative or logistical duties such as finances, member recruitment, registration, and team planning.</P></li>
+                <li><P>Teams should submit work in English and prepare to present in English.</P></li>
               </ol>
-            </P>
           </div>
           <div id="calendar">
             <H1>Calendar</H1>
-            <P><RedSubTitle>September 30th, 23:59 EST:</RedSubTitle> Project Descriptions due</P>
-            <P><RedSubTitle>October 23rd, 23:59 EST:</RedSubTitle> Advancing Teams Announced</P>
-            <P><RedSubTitle>November 20th, 23:59 EST:</RedSubTitle> Advancing Teams Presentation Submission Deadline</P>
-            <P><RedSubTitle>November 27-28th:</RedSubTitle> Virtual Showcase</P>
+            <CalendarSpan><RedSubTitle>September 30th, 23:59 EST:</RedSubTitle><P> Project Descriptions due</P></CalendarSpan>
+            <CalendarSpan><RedSubTitle>October 23rd, 23:59 EST:</RedSubTitle><P> Advancing Teams Announced</P></CalendarSpan>
+            <CalendarSpan><RedSubTitle>November 20th, 23:59 EST:</RedSubTitle><P> Advancing Teams Presentation Submission Deadline</P></CalendarSpan>
+            <CalendarSpan><RedSubTitle>November 27-28th:</RedSubTitle><P> Virtual Showcase</P></CalendarSpan>
           </div>
           <div id="application">
             <H1>Application Process</H1>
@@ -208,23 +216,23 @@ Lead administrative or logistical duties such as finances, member recruitment, r
             <RedSubTitle>Propulsion and Levitation Systems</RedSubTitle>
             <P>
               Systems responsible for actuating, driving, or moving the Hyperloop pod during runtime are considered to be propulsion and levitation systems. These include but are not limited to:
-              <ul>
-                <li>Induction motors</li>
-                <li>Magnets</li>
-                <li>Powertrains</li>
-              </ul>
             </P>
+            <ul>
+              <li><P>Induction motors</P></li>
+              <li><P>Magnets</P></li>
+              <li><P>Powertrains</P></li>
+            </ul>
 
             <RedSubTitle>Electronics</RedSubTitle>
             <P>
               The electronics category refers to any printed circuit boards (PCBs) that have been designed in-house. Examples of electronic systems include but are not limited to:
-              <ul>
-                <li>Battery management system boards</li>
-                <li>Boards used for internal and/or external communication</li>
-                <li>Electronic speed controllers (motor controllers)</li>
-                <li>Power distribution boards and voltage converters</li>
-              </ul>
             </P>
+              <ul>
+                <li><P>Battery management system boards</P></li>
+                <li><P>Boards used for internal and/or external communication</P></li>
+                <li><P>Electronic speed controllers (motor controllers)</P></li>
+                <li><P>Power distribution boards and voltage converters</P></li>
+              </ul>
 
             <RedSubTitle>Aeroshell</RedSubTitle>
             <P>
@@ -234,40 +242,40 @@ Lead administrative or logistical duties such as finances, member recruitment, r
             <RedSubTitle>Mechanical &#38; Structures </RedSubTitle>
             <P>
               The mechanical and structures category refers to any physical systems on the Hyperloop pod that do not qualify for any of the above categories. These may include but are not limited to:
-              <ul>
-                <li>Battery packs</li>
-                <li>Braking systems</li>
-                <li>Cooling systems</li>
-                <li>Enclosures</li>
-                <li>Frames and chassis</li>
-                <li>Guidance and suspension systems</li>
-              </ul>
             </P>
+              <ul>
+                <li><P>Battery packs</P></li>
+                <li><P>Braking systems</P></li>
+                <li><P>Cooling systems</P></li>
+                <li><P>Enclosures</P></li>
+                <li><P>Frames and chassis</P></li>
+                <li><P>Guidance and suspension systems</P></li>
+              </ul>
 
             <RedSubTitle>Other</RedSubTitle>
             <P>
               The other category is for projects that do not qualify for any of the above categories. This may include projects outside the Hyperloop pod as well. Some projects we'd be interested in but are not limited to include:
-              <ul>
-                <li>Constructing a track for Hyperloop pods</li>
-                <li>Exceptional software or controls projects</li>
-                <li>Testing systems for Hyperloop pods or subsystems</li>
-                <li>Unique transportation mechanisms for Hyperloop pods </li>
-              </ul>
             </P>
+              <ul>
+                <li><P>Constructing a track for Hyperloop pods</P></li>
+                <li><P>Exceptional software or controls projects</P></li>
+                <li><P>Testing systems for Hyperloop pods or subsystems</P></li>
+                <li><P>Unique transportation mechanisms for Hyperloop pods </P></li>
+              </ul>
           </div>
           <div id="criteria">
             <H1>Criteria</H1>
             <P>
               We expect each project description to provide the following information:
-              <ul>
-                <li>A brief explanation of what your team is presenting</li>
-                <li>A list of the technical specifications of your system</li>
-                <li>The reason why your system is unique and of interest to student Hyperloop teams</li>
-                <li>The current stage of your project (design, manufacturing, assembly, testing, redesign, or complete)</li>
-                <li>A clear explanation of which parts of the system were designed, programmed, and manufactured by team members and which were purchased from vendors, use publicly available software libraries, or reference external designs</li>
-                <li>An explanation of any unique factors that influenced your system during any of its stages and/or the next big milestones and challenges for the project</li>
-              </ul>
             </P>
+              <ul>
+                <li><P>A brief explanation of what your team is presenting</P></li>
+                <li><P>A list of the technical specifications of your system</P></li>
+                <li><P>The reason why your system is unique and of interest to student Hyperloop teams</P></li>
+                <li><P>The current stage of your project (design, manufacturing, assembly, testing, redesign, or complete)</P></li>
+                <li><P>A clear explanation of which parts of the system were designed, programmed, and manufactured by team members and which were purchased from vendors, use publicly available software libraries, or reference external designs</P></li>
+                <li><P>An explanation of any unique factors that influenced your system during any of its stages and/or the next big milestones and challenges for the project</P></li>
+              </ul>
           </div>
           <div id="questions">
             <H1>Questions</H1>

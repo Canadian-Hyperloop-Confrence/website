@@ -50,7 +50,7 @@ const JumpTo = ({ sections }: Props) => (
   <Container>
     <JumpToText>Jump to:</JumpToText>
     <Sections>
-      {sections.map(({ name, link }) => <a href={link}><Button variant='Primary'>{name}</Button></a>)}
+      {sections.map(({ name, link }) => <a href={link} key={name}><Button variant='Primary'>{name}</Button></a>)}
     </Sections>
   </Container>
 );
