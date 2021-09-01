@@ -102,10 +102,14 @@ const links: INavLink[] = [
   {
     label: 'Updates',
     to: '/updates'
+  },
+  {
+    label: 'Virtual Showcase',
+    to: '/virtual-showcase'
   }
 ];
 
-type TSelected = 'home' | 'faq' | 'partners' | 'teams' | 'contact us' | 'updates'
+type TSelected = 'home' | 'faq' | 'partners' | 'teams' | 'contact us' | 'updates' | 'virtual showcase'
 
 interface Props {
   selected: TSelected
