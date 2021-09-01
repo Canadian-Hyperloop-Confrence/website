@@ -172,7 +172,7 @@ Lead administrative or logistical duties such as finances, member recruitment, r
               <li>
                 <RedSubTitle>Project Description:</RedSubTitle>
                 <ol>
-                  <li><P>Teams who intend to participate in the virtual showcase need to send the <a href="https://docs.google.com/document/d/1l33KTgBi3GmkG-SpuR0XsYe3CyoM_I6XDWArkl_ue8M/edit?usp=sharing">Project Description Form</a> by September 30th, EST to <a href="mailto:chc@cahyperloop.ca">chc@cahyperloop.ca</a> , using "Virtual Showcase Application" subject line. Unless an extension has been announced, late submissions will not be accepted. </P></li>
+                  <li><P>Teams who intend to participate in the virtual showcase need to send the <a href="documents/Project_Description_Form.docx" download>Project Description Form</a> by September 30th, EST to <a href="mailto:chc@cahyperloop.ca">chc@cahyperloop.ca</a> , using "Virtual Showcase Application" subject line. Unless an extension has been announced, late submissions will not be accepted. </P></li>
                   <li><P>There are 4 categories each team can submit a project description for. Please see sub-categories for more information.</P></li>
                   <li><P>The number of categories you write a project description for will not affect whether your team gets selected or not.</P></li>
                   <li><P>Only your latest project description application will be considered.</P></li>
