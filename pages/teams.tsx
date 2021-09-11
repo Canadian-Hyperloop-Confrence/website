@@ -57,9 +57,19 @@ const WaterloopTitleContainer = styled.div`
   justify-content: start;
 `;
 
-const Ryerson = styled.img`
-  /* Hack b/c Ryerson logo is weird */
-  margin-top: -19px;
+const Image = styled.img`
+  max-height: 140px;
+  max-width: 220px;
+`;
+
+const CenterLink = styled.a`
+  display: flex;
+  align-items: center;
+`;
+
+const MiniSection = styled(Section)`
+  flex-grow: 0;
+  min-height: 0px;
 `;
 
 const Teams = () => {
@@ -81,21 +91,25 @@ const Teams = () => {
             {renderOurTeam}
           </OurTeamContainer>
         </Section>
-        <Section>
+        <MiniSection>
           <WaterloopTitleContainer>
             <WaterloopTitle>Waterloop </WaterloopTitle><WaterloopLogo/>
           </WaterloopTitleContainer>
           <Typography variant="body">
             Waterloop, the University of Waterloo Hyperloop Team, will be building a track in Waterloo, ON to be used for our 2022 Hyperloop Track Race. To reach out to Waterloop, please email <a href="mailto:infra@waterloop.ca">infra@waterloop.ca</a> about track related questions.
           </Typography>
+        </MiniSection>
+        <Section>
           <Typography variant="title">Partner Teams</Typography>
           <TeamContainer>
-            <a href="http://www.mcmasterhyperloop.ca/about"><img src="teams/mcmaster.png" alt="Mcmaster University"/></a>
-            <a href="https://teamwaterloop.ca/"><img src="teams/uwaterloo.png" alt="University of Waterloo"/></a>
-            <a href="https://ryersonhyperloop.com/"><Ryerson src="teams/ryerson.png" alt="Ryerson University"/></a>
-            <a href="https://www.utht.ca/"><img src="teams/uot.png" alt="University of Toronto"/></a>
-            <a href="https://queenshyperloop.ca/"><img src="teams/queens.png" alt="Queens University"/></a>
-            <a href="https://www.uwinloop.ca/our-team"><img src="teams/uwindsor.png" alt="University of Windsor"/></a>
+            <CenterLink href="http://www.mcmasterhyperloop.ca/about"><Image src="teams/mcmaster.png" alt="Mcmaster University"/></CenterLink>
+            <CenterLink href="https://ryersonhyperloop.com/"><Image src="teams/RIH_Logo_BlueYellow.png" alt="Ryerson University"/></CenterLink>
+            <CenterLink href="https://ca.linkedin.com/company/trillium-hyperloop"><Image src="teams/Trillium.png" alt="Trillium University"/></CenterLink>
+            <CenterLink href="https://www.utht.ca/"><Image src="teams/utht.png" alt="University of Toronto"/></CenterLink>
+            <CenterLink href="https://queenshyperloop.ca/"><Image src="teams/QHDT Full Name.png" alt="Queens University"/></CenterLink>
+            <CenterLink href="https://www.uwinloop.ca/our-team"><Image src="teams/uwindsor.png" alt="University of Windsor"/></CenterLink>
+            <CenterLink href="https://www.polyloop.ca/"><Image src="teams/PolyLoop Montréal sans fond.png" alt="Polytechnique Montréal"/></CenterLink>
+            <CenterLink href="http://albertaloop.ca/"><Image src="teams/albertaloop_logo.png" alt="Alberta Loop"/></CenterLink>
           </TeamContainer>
         </Section>
         <Footer />
