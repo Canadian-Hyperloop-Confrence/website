@@ -45,11 +45,6 @@ const OurTeam: TeamMemberHeadshot[] = [
     img: '/our-team/nusret.png'
   },
   {
-    name: 'Chloe Bell',
-    position: 'Lead Community Coordinator',
-    img: '/our-team/chloe.png'
-  },
-  {
     name: 'Shaheer Rana',
     position: 'Competitions Technical Lead',
     img: '/our-team/shaheer.png'
