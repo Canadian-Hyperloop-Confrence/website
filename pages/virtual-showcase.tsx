@@ -149,7 +149,7 @@ const VirtualShowCase = () => {
             { name: 'Eligibility', link: '#eligibility' },
             { name: 'Calendar', link: '#calendar' },
             { name: 'Application Process', link: '#application' },
-            { name: 'Catagories', link: '#catagories' },
+            { name: 'Categories', link: '#categories' },
             { name: 'Criteria', link: '#criteria' },
             { name: 'Questions', link: '#questions' },
           ]} />
@@ -211,7 +211,7 @@ Lead administrative or logistical duties such as finances, member recruitment, r
               </li>
             </ApplicationProcessList>
           </div>
-          <div id="catagories">
+          <div id="categories">
             <H1>Categories</H1>
             <RedSubTitle>Propulsion and Levitation Systems</RedSubTitle>
             <P>

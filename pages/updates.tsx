@@ -24,8 +24,14 @@ const BlogCard = styled(UBlogCard)`
 `;
 
 const Updates = () => {
-  const renderBlogCards = Blogs.map((blog) => <BlogCard {...blog}/> );
-  const renderVideoCards = Videos.map((video) => <BlogCard darkBackground {...video} />);
+  const renderBlogCards = Blogs
+    .sort((b, a) => a.date.year - b.date.year !== 0
+      ? a.date.year - b.date.year
+      : a.date.month - b.date.month !== 0
+        ? a.date.month - b.date.month
+        : a.date.day - b.date.day)
+    .map((blog) => <BlogCard key={blog.title} {...blog}/> );
+  const renderVideoCards = Videos.map((video) => <BlogCard darkBackground key={video.title} {...video} />);
   return (
     <div>
       <Head>

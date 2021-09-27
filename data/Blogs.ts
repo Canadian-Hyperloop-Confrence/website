@@ -28,6 +28,16 @@ const blogs: BlogCardData[] =  [
     },
     imageSrc: '/blogs/hyperloop101.jpg',
     link: 'https://waterloop.notion.site/Hyperloop-101-5c9d0cbccc0940f0b38cd7188d8d19b7'
+  },
+  {
+    title: 'CHC Spotlight: Virgin Hyperloop',
+    date: {
+      day: 30,
+      month: 9,
+      year: 2021,
+    },
+    imageSrc: '/blogs/virgin-hyperloop.jpg',
+    link: 'https://waterloop.notion.site/CHC-Spotlight-Virgin-Hyperloop-f88e1c51942b4757ad40d1c0216fd84e'
   }
 ]
 
