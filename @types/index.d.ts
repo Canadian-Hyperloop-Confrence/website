@@ -22,3 +22,9 @@ interface BlogCardData {
   date: SimpleDate;
   link: string;
 }
+
+interface PartnerSponsorImageCard {
+  imageSrc: string;
+  altText: string;
+  link: string;
+}
