@@ -39,6 +39,14 @@ const Card = styled.div<{invertBorder: boolean }>`
   ${TextContainer} {
     width: 66%;
   }
+
+  @media screen and (max-width: ${({ theme }): string => theme.breakPoints.desktop}) {
+    flex-direction: column;
+
+    ${BlogImage} {
+      width: 100%;
+    }
+  }
 `;
 
 type BlogCardComponent = (props: BlogCardData & { className?: string; darkBackground?: boolean }) => React.ReactElement

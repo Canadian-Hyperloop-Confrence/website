@@ -28,6 +28,7 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  flex-wrap: wrap;
 
   ${SocialMediaIcon} {
     margin-left: 16px;
@@ -35,6 +36,7 @@ const ButtonContainer = styled.div`
 
   ${Button} {
     margin-right: 24px;
+    margin-bottom: 8px;
   }
 `;
 
@@ -72,10 +74,12 @@ const ContactUs = () => {
               >
               Sign up for newsletter!
             </Button>
-            <a href="https://www.linkedin.com/company/cahyperloop/"><SocialMediaIcon src="linked-in.svg" /></a>
-            <a href="https://www.facebook.com/cahyperloop"><SocialMediaIcon src="facebook.svg" /></a>
-            <a href="https://www.instagram.com/cahyperloop/"><SocialMediaIcon src="instagram.svg" /></a>
-            <a href="https://twitter.com/cahyperloop"><SocialMediaIcon src="twitter.svg" /></a>
+            <div>
+              <a href="https://www.linkedin.com/company/cahyperloop/"><SocialMediaIcon src="linked-in.svg" /></a>
+              <a href="https://www.facebook.com/cahyperloop"><SocialMediaIcon src="facebook.svg" /></a>
+              <a href="https://www.instagram.com/cahyperloop/"><SocialMediaIcon src="instagram.svg" /></a>
+              <a href="https://twitter.com/cahyperloop"><SocialMediaIcon src="twitter.svg" /></a>
+            </div>
           </ButtonContainer>
         </Section>
         <Footer />
