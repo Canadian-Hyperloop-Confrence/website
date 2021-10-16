@@ -42,10 +42,10 @@ const ButtonContainer = styled.div`
 
 const ContactUs = () => {
   const handleSendEmailButtonClicked = () => {
-    window.open('mailto:hello@cahyperloop.ca');
+    window.open('mailto:chc@cahyperloop.ca');
   }
   const handleNewsletterSignUp = () => {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLScTRSthtrnVzxDNnuxhUHHjwh2Y2mVEDZ2fHIIqozVvVtxFUQ/viewform');
+    window.open('http://eepurl.com/hItDq5');
   }
   return (
     <div>
