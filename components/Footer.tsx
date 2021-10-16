@@ -11,6 +11,9 @@ const LinkContainer = styled.div`
 const LinkText = styled.p`
   color: ${({ theme }): string => theme.palette.chcWhite};
   margin-left: 30px;
+  cursor: pointer;
+  font: ${({ theme }): string => theme.typography.nav.regular};
+  align-self: center;
 `;
 
 
