@@ -7,6 +7,7 @@ import Typography from "../components/Typography";
 import UBlogCard from '../components/BlogCard';
 import Blogs from '../data/Blogs';
 import Videos from '../data/Videos';
+import HyperloopNews from '../data/HyperloopNews';
 
 const Header = styled(Typography).attrs({
   variant: 'header'
@@ -23,15 +24,22 @@ const BlogCard = styled(UBlogCard)`
   margin-bottom: 16px;
 `;
 
+const byDate = (b: BlogCardData, a: BlogCardData): number => a.date.year - b.date.year !== 0
+  ? a.date.year - b.date.year
+  : a.date.month - b.date.month !== 0
+    ? a.date.month - b.date.month
+    : a.date.day - b.date.day;
+
 const Updates = () => {
   const renderBlogCards = Blogs
-    .sort((b, a) => a.date.year - b.date.year !== 0
-      ? a.date.year - b.date.year
-      : a.date.month - b.date.month !== 0
-        ? a.date.month - b.date.month
-        : a.date.day - b.date.day)
+    .sort(byDate)
     .map((blog) => <BlogCard key={blog.title} {...blog}/> );
-  const renderVideoCards = Videos.map((video) => <BlogCard darkBackground key={video.title} {...video} />);
+  const renderVideoCards = Videos
+    .sort(byDate)
+    .map((video) => <BlogCard darkBackground key={video.title} {...video} />);
+  const renderHyperloopNewsCards = HyperloopNews
+    .sort(byDate)
+    .map((news) => <BlogCard key={news.title} {...news} />);
   return (
     <div>
       <Head>
@@ -50,6 +58,10 @@ const Updates = () => {
         <Section>
           <Typography variant="title">Youtube Videos</Typography>
           {renderVideoCards}
+        </Section>
+        <Section>
+          <Typography variant="title">Hyperloop News</Typography>
+          {renderHyperloopNewsCards}
         </Section>
         <Footer />
       </PageContainer>
