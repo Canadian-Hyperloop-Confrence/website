@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
         </LandingSlide>
         <Section>
           <Typography variant="header">We Are CHC</Typography>
-          <iframe width="700" height="400" src="https://www.youtube-nocookie.com/embed/gve6qAB0_4M" title="We Are CHC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="700" height="400" src="https://www.youtube-nocookie.com/embed/gve6qAB0_4M" title="We Are CHC"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <Typography variant="title">Our Vision</Typography>
           <Typography variant="body">Hyperloop has the potential to enable the highest speed passenger transportation while simultaneously achieving the highest per-passenger-km efficiency. Hyperloop technologies promise a sustainable, economical, and reliable mode of transportation, and the goal of the CHC is to enable this future to happen, especially in Canada. We aspire to inspire Hyperloop innovation, realization, and deployment, and thereby **accelerate the sustainable future of transportation.</Typography>
           <Typography variant="title">Our Mission</Typography>
