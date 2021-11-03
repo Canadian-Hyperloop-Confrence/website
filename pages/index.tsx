@@ -15,7 +15,6 @@ const ByLine = styled(Typography).attrs({
 `;
 
 const HomePage: React.FC = () => {
-
   return (
     <div>
       <Head>
