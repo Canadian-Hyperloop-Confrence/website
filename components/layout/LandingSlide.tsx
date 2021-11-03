@@ -4,8 +4,7 @@ import styled from 'styled-components';
 const Outer = styled.div`
   width: 100%;
   display: flex;
-  /* height: calc(100vh - ${({ theme }): string => theme.constants.navbarHeight}); */
-  height: 515px;
+  height: 280px;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }):string => theme.palette.chcBlackA};
