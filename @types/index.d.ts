@@ -19,8 +19,9 @@ interface SimpleDate {
 interface BlogCardData {
   title: string;
   imageSrc: string;
-  date: SimpleDate;
+  datePosted: SimpleDate;
   link: string;
+  type: 'medium' | 'video' | 'news'
 }
 
 interface PartnerSponsorImageCard {

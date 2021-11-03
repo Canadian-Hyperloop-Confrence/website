@@ -51,7 +51,7 @@ const Card = styled.div<{invertBorder: boolean }>`
 
 type BlogCardComponent = (props: BlogCardData & { className?: string; darkBackground?: boolean }) => React.ReactElement
 
-const BlogCard: BlogCardComponent = ({ title, imageSrc, date, link, className, darkBackground=false }) => {
+const BlogCard: BlogCardComponent = ({ title, imageSrc, datePosted: date, link, className, darkBackground=false }) => {
 
   const handleGoToBlog = () => {
     window.open(link)
