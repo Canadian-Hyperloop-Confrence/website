@@ -16,7 +16,7 @@ const Header = styled(Typography).attrs({
 `;
 
 const Section = styled(USection)`
-  min-height: 740px;
+  min-height: calc(max(100vh, 740px));
 `;
 
 const LogosContainer = styled.div`
@@ -83,7 +83,6 @@ const Partners = () => {
               Let's Talk!
             </Button>
         </Section>
-        <Footer />
       </PageContainer>
     </div>
   )

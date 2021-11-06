@@ -286,7 +286,6 @@ Lead administrative or logistical duties such as finances, member recruitment, r
             <KeyboardArrowUpIcon/>
           </BackToTop>
         </Section>
-        <Footer />
       </PageContainer>
     </div>
   )

@@ -52,7 +52,6 @@ const HomePage: React.FC = () => {
           <Typography variant="body">EQUALITY + EMPOWERMENT: CHC is an organization that promotes to showcase work from all levels of experience. From new teams to teams with multiple competition experience, CHC aims to address the knowledge gap and provide an open platform for teams to improve themselves.</Typography>
           <Typography variant="body">INNOVATION: CHC will initiate interest and development in previously unexplored areas related to hyperloop. CHC members will have a platform to cultivate dialogue between member schools, and tangible means to support ideas through awards, etc.</Typography>
         </Section>
-        <Footer />
       </PageContainer>
     </div>
   );

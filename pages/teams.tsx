@@ -15,7 +15,7 @@ const Header = styled(Typography).attrs({
 `;
 
 const Section = styled(USection)`
-  min-height: 740px;
+  min-height: calc(max(100vh, 740px));
 `;
 
 const OurTeamContainer = styled.div`
@@ -112,7 +112,6 @@ const Teams = () => {
             <CenterLink href="http://albertaloop.ca/"><Image src="teams/albertaloop_logo.png" alt="Alberta Loop"/></CenterLink>
           </TeamContainer>
         </Section>
-        <Footer />
       </PageContainer>
     </div>
   );

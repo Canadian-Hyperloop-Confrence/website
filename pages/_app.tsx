@@ -1,6 +1,7 @@
 import type { AppProps, AppContext } from 'next/app'
 import App from 'next/app';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Footer from '../components/Footer';
 import theme from '../theme';
 
 const GlobalStyle = createGlobalStyle`
@@ -8,8 +9,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: ${({ theme }) => theme.palette.chcWhite};
+    min-height: 100vh;
   }
 `
+
+const ViewBox = styled.div`
+  min-height: 100vh;
+`;
 
 /*
   * The MyApp Component that is exported by
@@ -22,7 +28,10 @@ const GlobalStyle = createGlobalStyle`
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle/>
-    <Component {...pageProps} />
+    <ViewBox>
+      <Component {...pageProps} />
+    </ViewBox>
+    <Footer />
   </ThemeProvider>
 );
 

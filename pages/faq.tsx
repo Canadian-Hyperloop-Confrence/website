@@ -33,7 +33,7 @@ const RedTitle = styled.h1`
 
 
 const Section = styled(USection)`
-  min-height: 740px;
+    min-height: calc(max(100vh, 740px));
 `;
 
 const FAQ = () => {
@@ -63,7 +63,6 @@ const FAQ = () => {
           <RedTitle>Where is the Canadian Hyperloop Conference</RedTitle>
           <Typography variant="body">The majority of our 2021 events will take place online. Our 2022 Hyperloop competition will take place in Waterloo, ON, Canada.</Typography>
         </Section>
-        <Footer/>
       </PageContainer>
     </div>
   )

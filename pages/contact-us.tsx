@@ -16,7 +16,7 @@ const Header = styled(Typography).attrs({
 `;
 
 const Section = styled(USection)`
-  min-height: 740px;
+  min-height: calc(max(100vh, 740px));
 `;
 
 const SocialMediaIcon = styled.img`
@@ -82,7 +82,6 @@ const ContactUs = () => {
             </div>
           </ButtonContainer>
         </Section>
-        <Footer />
       </PageContainer>
     </div>
   )

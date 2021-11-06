@@ -74,7 +74,6 @@ const Updates = ({ posts }: Props) => {
           <Typography variant="title">Hyperloop News</Typography>
           {renderHyperloopNewsCards}
         </Section>
-        <Footer />
       </PageContainer>
     </div>
   );
