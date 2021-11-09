@@ -20,11 +20,6 @@ const OurTeam: TeamMemberHeadshot[] = [
     img: '/our-team/jennifer.png'
   },
   {
-    name: 'Sydney Zhang',
-    position: 'Social Media Lead',
-    img: '/our-team/sydney.png'
-  },
-  {
     name: 'Quinn Hodges',
     position: 'Lead Web Developer',
     img: '/our-team/quinn.png'
@@ -45,9 +40,24 @@ const OurTeam: TeamMemberHeadshot[] = [
     img: '/our-team/nusret.png'
   },
   {
-    name: 'Shaheer Rana',
-    position: 'Competitions Technical Lead',
-    img: '/our-team/shaheer.png'
+    name: 'Erik Jelezarov',
+    position: 'Competitions Technical Member',
+    img: '/our-team/erik-jelezarov.jpg'
+  },
+  {
+    name: 'Shunethra Senthilkumar',
+    position: 'Competitions Lead',
+    img: '/our-team/shunethra-senthilkumar.jpg'
+  },
+  {
+    name: 'Isabella Lee',
+    position: 'Photography and Videography Lead',
+    img: '/our-team/isabella-lee.jpg'
+  },
+  {
+    name: 'Justin Tsai',
+    position: 'Events Team Member',
+    img: '/our-team/justin-tsai.jpg'
   },
 ]
 
