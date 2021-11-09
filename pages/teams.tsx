@@ -83,7 +83,7 @@ const Teams = () => {
       <NavBar selected="teams"/>
       <PageContainer>
         <LandingSlide>
-          <Header>PARTICIPATING TEAMS</Header>
+          <Header>TEAMS</Header>
         </LandingSlide>
         <Section>
           <Typography variant="title">Our Team</Typography>
