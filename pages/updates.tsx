@@ -14,9 +14,6 @@ const Header = styled(Typography).attrs({
   text-align: center;
 `;
 
-const Section = styled(USection)`
-  min-height: 740px;
-`;
 
 const BlogCard = styled(UBlogCard)`
   margin-bottom: 16px;
