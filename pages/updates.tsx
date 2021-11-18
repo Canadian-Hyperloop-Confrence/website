@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Head from "next/head";
 import Footer from "../components/Footer";
-import { LandingSlide, PageContainer, Section as USection } from "../components/layout";
+import { LandingSlide, PageContainer, Section } from "../components/layout";
 import NavBar from "../components/NavBar";
 import Typography from "../components/Typography";
 import UBlogCard from '../components/BlogCard';
