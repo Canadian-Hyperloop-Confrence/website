@@ -8,6 +8,9 @@ import JumpTo from '../components/JumpTo';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useCallback, useState } from 'react';
 import { useEffect } from 'react';
+import Carousel from '../components/Carousel';
+import VirtualShowcaseTeams from '../data/VirtualShowcaseTeams';
+import VirtualShowcaseTeamCard from '../components/VirtualShowcaseTeamCard';
 
 const Header = styled(Typography).attrs({
   variant: 'header'
@@ -203,7 +206,13 @@ const VirtualShowCase = () => {
                 <li><P>Unique transportation mechanisms for Hyperloop pods </P></li>
               </ul>
           </div>
-
+          <div id="Teams" aria-label="Teams and Presentations">
+            <H1>Teams &amp; Presentations</H1>
+            <Carousel
+              Component={VirtualShowcaseTeamCard}
+              items={VirtualShowcaseTeams}
+            />
+          </div>
           <BackToTop className={showScrollToTop} onClick={goToTop}>
             <KeyboardArrowUpIcon/>
           </BackToTop>

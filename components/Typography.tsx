@@ -27,14 +27,15 @@ interface Props {
   variant: 'body' | 'header' | 'title' | 'subtitle';
   children: ReactNode;
   className?: string;
+  color?: 'red' | 'black';
 }
 
-const Typography: React.FC<Props> = ({ variant, children, className }) => {
+const Typography: React.FC<Props> = ({ variant, children, className, color='black' }) => {
   switch (variant) {
-    case 'body':      return <Body className={`${className} typography`}>{children}</Body>;
-    case 'title':     return <Title className={`${className} typography`}>{children}</Title>;
-    case 'header':    return <Header className={`${className} typography`}>{children}</Header>;
-    case 'subtitle':  return <SubTitle className={`${className} typography`}>{children}</SubTitle>;
+    case 'body':      return <Body className={`${className} typography typography-${color}`}>{children}</Body>;
+    case 'title':     return <Title className={`${className} typography typography-${color}`}>{children}</Title>;
+    case 'header':    return <Header className={`${className} typography typography-${color}`}>{children}</Header>;
+    case 'subtitle':  return <SubTitle className={`${className} typography typography-${color}`}>{children}</SubTitle>;
   }
 }
 
