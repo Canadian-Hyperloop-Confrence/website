@@ -145,15 +145,15 @@ const VirtualShowCase = () => {
           <Header>Virtual Showcase</Header>
         </LandingSlide>
         <Section>
-          <Typography variant="body">
+          <P>
             The Canadian Hyperloop Conference Virtual Showcase took place over November 27-28!
-            <ul>
-              <li>155 attendees in total</li>
-              <li>11 design teams were represented</li>
-              <li>13 different presentations were given</li>
-              <li>Hyperloop Industry Representation</li>
-            </ul>
-          </Typography>
+          </P>
+          <ul>
+            <li><P>155 attendees in total</P></li>
+            <li><P>11 design teams were represented</P></li>
+            <li><P>13 different presentations were given</P></li>
+            <li><P>Hyperloop Industry Representation</P></li>
+          </ul>
           <div id="categories">
             <H1>Categories</H1>
             <RedSubTitle>Propulsion and Levitation Systems</RedSubTitle>

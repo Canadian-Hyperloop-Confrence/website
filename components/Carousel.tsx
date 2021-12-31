@@ -6,9 +6,17 @@ const Clickable = styled.div``;
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
   justify-content: center;
   align-items: center;
+  position: relative;
+  right: 390px;
+  ${Clickable} {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: 16px;
 `;
 
 
@@ -19,7 +27,7 @@ function getFive<T>(array: Array<T>, centerIndex: number): Array<T> {
   if (centerIndex === 1) {
     return [array[array.length-1], array[0] , array[centerIndex], array[(centerIndex + 1) % array.length], array[(centerIndex + 2) % array.length]]
   }
-  return [array[centerIndex-1] , array[centerIndex], array[(centerIndex + 1) % array.length]]
+  return [array[centerIndex-2], array[centerIndex-1] , array[centerIndex], array[(centerIndex + 1) % array.length], array[(centerIndex + 2) % array.length]]
 }
 
 function CarouselItemContainer({
@@ -50,6 +58,7 @@ function Carousel<T>({
   }
   const carouselElements = useMemo(() => items.map((item, index) => (
     <CarouselItemContainer
+      key={index}
       onSelected={handleItemSelected(index)}
     >
       <Component item={item} />

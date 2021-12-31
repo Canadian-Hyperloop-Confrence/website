@@ -40,5 +40,6 @@ interface VirtualShowcaseTeamPreview {
   team: Team
   category: string;
   title: string;
+  presentationLink: string;
   summary?: string;
 }

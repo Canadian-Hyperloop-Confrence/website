@@ -15,13 +15,13 @@ const PageContainer = styled.div`
 
   .section:nth-child(2n) {
     background-color: ${({ theme }):string => theme.palette.chcWhite};
-    .typography{
+    .typography-black{
       color: ${({ theme }):string => theme.palette.chcBlackA};
     }
   }
   .section:nth-child(2n+1) {
     background-color: ${({ theme }):string => theme.palette.chcBlackA};
-    .typography {
+    .typography-black {
       color: ${({ theme }):string => theme.palette.chcWhite};
     }
     a {
