@@ -29,3 +29,17 @@ interface PartnerSponsorImageCard {
   altText: string;
   link: string;
 }
+
+interface Team {
+  name: string;
+  instituiton?: string;
+  logo: string;
+}
+
+interface VirtualShowcaseTeamPreview {
+  team: Team
+  category: string;
+  title: string;
+  presentationLink: string;
+  summary?: string;
+}

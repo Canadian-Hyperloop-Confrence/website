@@ -3,15 +3,7 @@ import App from 'next/app';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Footer from '../components/Footer';
 import theme from '../theme';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: ${({ theme }) => theme.palette.chcWhite};
-    min-height: 100vh;
-  }
-`
+import GlobalStyle from '../theme/global-styles';
 
 const ViewBox = styled.div`
   min-height: 100vh;

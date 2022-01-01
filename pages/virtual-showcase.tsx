@@ -8,6 +8,9 @@ import JumpTo from '../components/JumpTo';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useCallback, useState } from 'react';
 import { useEffect } from 'react';
+import Carousel from '../components/Carousel';
+import VirtualShowcaseTeams from '../data/VirtualShowcaseTeams';
+import VirtualShowcaseTeamCard from '../components/VirtualShowcaseTeamCard';
 
 const Header = styled(Typography).attrs({
   variant: 'header'
@@ -142,75 +145,15 @@ const VirtualShowCase = () => {
           <Header>Virtual Showcase</Header>
         </LandingSlide>
         <Section>
-          <Typography variant="body">
-            The Canadian Hyperloop Showcase is a great venue for university level hyperloop design teams to showcase their work in a virtual setting and connect with other teams!
-          </Typography>
-          <JumpTo sections={[
-            { name: 'Eligibility', link: '#eligibility' },
-            { name: 'Calendar', link: '#calendar' },
-            { name: 'Application Process', link: '#application' },
-            { name: 'Categories', link: '#categories' },
-            { name: 'Criteria', link: '#criteria' },
-            { name: 'Questions', link: '#questions' },
-          ]} />
-          <div id="eligibility">
-            <H1>Eligibility</H1>
-            <P>
-              To be eligible for the Virtual Showcase, teams must adhere to the following requirements:
-            </P>
-              <ol>
-                <li><P>Only student teams composed of undergraduate and graduate students enrolled as of the initial registration deadline are permitted to compete. Members outside this category may only hold advisory roles and are subject to all the regulations in Criterion 2.</P></li>
-                <li><P>Advisors are permitted and encouraged to attend the Virtual Showcase but cannot: Answer questions during technical interviews with the Canadian Hyperloop Conference on behalf of the team.
-Be a lead contributor to the manufacturing, designing, or engineering of any components, systems, or modules.
-Directly edit, write, or create any content in team documents, presentations, or schematics submitted to the Canadian Hyperloop Conference.
-Lead administrative or logistical duties such as finances, member recruitment, registration, and team planning.</P></li>
-                <li><P>Teams should submit work in English and prepare to present in English.</P></li>
-              </ol>
-          </div>
-          <div id="calendar">
-            <H1>Calendar</H1>
-            <CalendarSpan><RedSubTitle>September 30th, 23:59 EST:</RedSubTitle><P> Project Descriptions due</P></CalendarSpan>
-            <CalendarSpan><RedSubTitle>October 23rd, 23:59 EST:</RedSubTitle><P> Advancing Teams Announced</P></CalendarSpan>
-            <CalendarSpan><RedSubTitle>November 20th, 23:59 EST:</RedSubTitle><P> Advancing Teams Presentation Submission Deadline</P></CalendarSpan>
-            <CalendarSpan><RedSubTitle>November 27-28th:</RedSubTitle><P> Virtual Showcase</P></CalendarSpan>
-          </div>
-          <div id="application">
-            <H1>Application Process</H1>
-            <ApplicationProcessList>
-              <li>
-                <RedSubTitle>Project Description:</RedSubTitle>
-                <ol>
-                  <li><P>Teams who intend to participate in the virtual showcase need to send the <a href="documents/Project_Description_Form.docx" download>Project Description Form</a> by September 30th, EST to <a href="mailto:chc@cahyperloop.ca">chc@cahyperloop.ca</a> , using "Virtual Showcase Application" subject line. Unless an extension has been announced, late submissions will not be accepted. </P></li>
-                  <li><P>There are 4 categories each team can submit a project description for. Please see sub-categories for more information.</P></li>
-                  <li><P>The number of categories you write a project description for will not affect whether your team gets selected or not.</P></li>
-                  <li><P>Only your latest project description application will be considered.</P></li>
-                </ol>
-              </li>
-              <li>
-                <RedSubTitle>Advancing teams:</RedSubTitle>
-                <ul>
-                  <li><P>Between September 30th and October 23rd, CHC Technical team will review project descriptions.</P></li>
-                  <li><P>CHC Technical team will select those who are fit to present for the virtual showcase based on advancement criterion.</P></li>
-                  <li><P>Those who are selected will be notified by October 23rd, 23:59 EST. </P></li>
-                </ul>
-              </li>
-              <li>
-                <RedSubTitle>Presentations:</RedSubTitle>
-                <ul>
-                  <li><P>Based on the number of applicants, details about the presentations will be decided by October 23rd.</P></li>
-                  <li><P>Teams will receive directions on the presentations by October 23rd, 23:59 EST if they advance.</P></li>
-                  <li><P>Advancing teams have until November 20th, 23:59 EST to submit their presentations, but we encourage them to submit earlier.</P></li>
-                </ul>
-              </li>
-              <li>
-                <RedSubTitle>Showcase:</RedSubTitle>
-                <ul>
-                  <li><P>CHC Virtual Showcase will take place on November 27-28. The complete schedule will be announced later. </P></li>
-                  <li><P>The virtual showcase will have an open registration and live-streamed through web platforms.</P></li>
-                </ul>
-              </li>
-            </ApplicationProcessList>
-          </div>
+          <P>
+            The Canadian Hyperloop Conference Virtual Showcase took place over November 27-28!
+          </P>
+          <ul>
+            <li><P>155 attendees in total</P></li>
+            <li><P>11 design teams were represented</P></li>
+            <li><P>13 different presentations were given</P></li>
+            <li><P>Hyperloop Industry Representation</P></li>
+          </ul>
           <div id="categories">
             <H1>Categories</H1>
             <RedSubTitle>Propulsion and Levitation Systems</RedSubTitle>
@@ -263,24 +206,12 @@ Lead administrative or logistical duties such as finances, member recruitment, r
                 <li><P>Unique transportation mechanisms for Hyperloop pods </P></li>
               </ul>
           </div>
-          <div id="criteria">
-            <H1>Criteria</H1>
-            <P>
-              We expect each project description to provide the following information:
-            </P>
-              <ul>
-                <li><P>A brief explanation of what your team is presenting</P></li>
-                <li><P>A list of the technical specifications of your system</P></li>
-                <li><P>The reason why your system is unique and of interest to student Hyperloop teams</P></li>
-                <li><P>The current stage of your project (design, manufacturing, assembly, testing, redesign, or complete)</P></li>
-                <li><P>A clear explanation of which parts of the system were designed, programmed, and manufactured by team members and which were purchased from vendors, use publicly available software libraries, or reference external designs</P></li>
-                <li><P>An explanation of any unique factors that influenced your system during any of its stages and/or the next big milestones and challenges for the project</P></li>
-              </ul>
-          </div>
-          <div id="questions">
-            <H1>Questions</H1>
-            <P>We will be hosting several sessions going over showcase details, follow us on our social media accounts.</P>
-            <P>If you have any further questions, please send us an email at <a href="mailto:chc@cahyperloop.ca?subject=Question">chc@cahyperloop.ca</a> with subject line "Question".</P>
+          <div id="Teams" aria-label="Teams and Presentations">
+            <H1>Teams &amp; Presentations</H1>
+            <Carousel
+              Component={VirtualShowcaseTeamCard}
+              items={VirtualShowcaseTeams}
+            />
           </div>
           <BackToTop className={showScrollToTop} onClick={goToTop}>
             <KeyboardArrowUpIcon/>

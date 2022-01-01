@@ -36,6 +36,7 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 `;
 
 const MobileNavMenuContainer = styled.div<{ open: boolean}>`
@@ -120,13 +121,12 @@ const useBreakpoint = (breakpoint: string): boolean => {
   const [size] = useState<number>(parseInt(breakpoint.slice(0, breakpoint.length-2), 10));
   useEffect(() => {
     setBiggerThanBreakPoint(window.innerWidth > size);
-    window.addEventListener('resize', () => {
+    const resizeHandler = () => {
       setBiggerThanBreakPoint(window.innerWidth > size)
-    });
+    }
+    window.addEventListener('resize', resizeHandler);
     return function unMount() {
-      window.removeEventListener('resize', () => {
-        setBiggerThanBreakPoint(window.innerWidth > parseInt(breakpoint.slice(0, breakpoint.length-2), 10))
-      });
+      window.removeEventListener('resize', resizeHandler);
     }
   });
   return biggerThanBreakPoint;
