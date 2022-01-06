@@ -204,7 +204,7 @@ const Competition = () => {
           <Title>Competition Application Submission Guide</Title>
           <Body>Each team has to fill <StyledLink href="https://docs.google.com/forms/d/1qDiGkUOfxa4JaC_3H_05OUiLizKTFy5kqQXxr6NfD6U/edit">this survey</StyledLink> in order to submit their documents. Please refer to the rulebook documentation section for further information.</Body>
           <Body>The rulebook outlines all the rules and requirements for all teams participating in the in-person event. </Body>
-          <Body>The Rulebook is subject to change at any time, participating teams will be notified if any changes occur throughout the application stage and during the in-person event. All submissions, including the White Paper and Final Design Package, for the 2022 CHC Competition should abide to all the rules and terms listed in the 2022 CHC Competition Rulebook. CHC reserves the rig   ht to reject teams who do not meet the requirements as listed. </Body>
+          <Body>The Rulebook is subject to change at any time, participating teams will be notified if any changes occur throughout the application stage and during the in-person event. All submissions, including the White Paper and Final Design Package, for the 2022 CHC Competition should abide to all the rules and terms listed in the 2022 CHC Competition Rulebook. CHC reserves the right to reject teams who do not meet the requirements as listed. </Body>
           <Link href="/documents/CHC_Rulebook_1.0.pdf"><Button>Rulebook</Button></Link>
         </Section>
       </PageContainer>
