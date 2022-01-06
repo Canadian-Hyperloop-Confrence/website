@@ -3,6 +3,12 @@ interface INavLink {
   readonly to:  string;
 }
 
+interface INavPrefix {
+  readonly label: string;
+  readonly prefix: string;
+  readonly routes: INavLink[];
+}
+
 interface TeamMemberHeadshot {
   name: string;
   position: string;

@@ -54,7 +54,7 @@ const Updates = ({ posts }: Props) => {
         <title>Canadian Hyperloop Conference</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar selected="updates"/>
+      <NavBar/>
       <PageContainer>
         <LandingSlide>
           <Header>Updates</Header>

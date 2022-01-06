@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useReducer, useState } from 'react';
 import styled, { css, DefaultTheme, FlattenInterpolation, ThemeProps, useTheme } from 'styled-components';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const LinkContainer = styled.div`
   height: 100%;
@@ -17,13 +18,14 @@ const LinkText = styled.p<{selected: boolean}>`
   ` : css``}
   cursor: pointer;
   font: ${({ theme }): string => theme.typography.nav.regular};
-  align-self: center;
+  align-self: flex-start;
 `;
 
 
 const Container = styled.div`
   width: 100%;
-  height: ${({ theme }): string => theme.constants.navbarHeight};
+  min-height: ${({ theme }): string => theme.constants.navbarHeight};
+  height: fit-content;
 
   background-color: ${({ theme }): string => theme.palette.chcBlackA};
 
@@ -55,7 +57,8 @@ const MobileNavMenu = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 30%;
+  min-width: 30%;
+  width: fit-content;
   position: fixed;
   top: 0;
   right: 0;
@@ -74,12 +77,21 @@ const MobileNavMenu = styled.div`
 const CHCLogo = styled.img.attrs({
   src: '/chc-logo-large.svg'
 })`
-  height: 64px;
-  margin-top: 14px;
-  padding-bottom: 14px;
+  width: 64px;
+  align-self: flex-start;
 `;
 
-const links: INavLink[] = [
+const ExtendedNavSection = styled.div`
+  min-height: max-content;
+  ${LinkText}:first-child {
+    padding-right: 4px;
+  }
+  ${LinkText}:not(:first-child) {
+    margin-top: 0px;
+  }
+`;
+
+const links: (INavLink | INavPrefix)[] = [
   {
     label: 'Home',
     to: '/',
@@ -87,6 +99,20 @@ const links: INavLink[] = [
   {
     label: 'FAQ',
     to: '/faq',
+  },
+  {
+    prefix: '/events',
+    label: 'Events',
+    routes: [
+      {
+        label: 'Virtual Showcase',
+        to: '/events/virtual-showcase'
+      },
+      {
+        label: 'Competition',
+        to: '/events/competition'
+      }
+    ]
   },
   {
     label: 'Partners',
@@ -104,16 +130,10 @@ const links: INavLink[] = [
     label: 'Updates',
     to: '/updates'
   },
-  {
-    label: 'Virtual Showcase',
-    to: '/virtual-showcase'
-  }
 ];
 
-type TSelected = 'home' | 'faq' | 'partners' | 'teams' | 'contact us' | 'updates' | 'virtual showcase'
-
-interface Props {
-  selected: TSelected
+function isPrefix(object: object): object is INavPrefix {
+  return 'prefix' in object
 }
 
 const useBreakpoint = (breakpoint: string): boolean => {
@@ -132,10 +152,83 @@ const useBreakpoint = (breakpoint: string): boolean => {
   return biggerThanBreakPoint;
 }
 
-const NavBar: React.FC<Props> = ({ selected }) =>  {
+const useCurrentPage = (): string => {
+  const { pathname } = useRouter();
+  return pathname;
+}
+
+const NavBlock = ({
+  open,
+  onClick,
+  navprefix,
+  currentPage
+} : {
+  open: boolean;
+  onClick: () => void;
+  navprefix: INavPrefix;
+  currentPage: string;
+
+}): React.ReactElement => {
+  return (
+    <ExtendedNavSection onClick={onClick}>
+      <div style={{ display: 'flex' }}><LinkText className={open ? 'open' : ''} selected={!open && currentPage.startsWith(navprefix.prefix)}>{navprefix.label}</LinkText> <img src={open ? '/chevron-down.svg' : '/chevron-right.svg'}/></div>
+      { open &&
+        navprefix.routes.map((link, index) => (
+          <Link href={link.to} key={index}>
+            <LinkText selected={link.to === currentPage}>{link.label}</LinkText>
+          </Link>
+        ))
+      }
+    </ExtendedNavSection>
+  )
+}
+
+const reducer = (state: Record<string, INavPrefix & { open: boolean }>, {
+  type,
+  prefix,
+} : { type: string, prefix: string }) => {
+  const initial = type === 'close' ? '' : state[prefix].open;
+  Object.keys(state).forEach((key) => {
+    state[key].open = false;
+  });
+  if (type !== 'close') {
+    state[prefix].open = !initial;
+  }
+  return {
+    ...state
+  }
+}
+
+const useScrollHandler = (onScroll: () => void) => {
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll)
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    }
+  }, [onScroll]);
+}
+
+const NavBar = (): React.ReactElement =>  {
   const theme = useTheme();
   const isDesktop = useBreakpoint(theme.breakPoints.desktop);
   const [navMenuOpen, setNavMenuOpen] = useState(false);
+  const currentPage = useCurrentPage();
+  const [state, dispatch] = useReducer(
+    reducer,
+    links
+    .filter<INavPrefix>((link): link is INavPrefix => isPrefix(link))
+    .reduce<Parameters<typeof reducer>[0]>((acc, cur: INavPrefix) => ({
+      ...acc,
+      [cur.prefix]: {
+        ...cur,
+        open: false,
+      }
+    }), {}));
+
+  const handleScroll = useCallback(() => {
+    dispatch({ type: 'close', prefix: ''})
+  }, [dispatch]);
+  useScrollHandler(handleScroll);
 
   const openMenu = useCallback(() => {
     setNavMenuOpen(true);
@@ -149,11 +242,18 @@ const NavBar: React.FC<Props> = ({ selected }) =>  {
     <Container>
       <CHCLogo/>
       <LinkContainer>
-        {links.map((link, index) => (
-          <Link href={link.to} key={index}>
-            <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
-          </Link>
-        ))}
+        {links.map((link, index) => {
+          if (isPrefix(link)) {
+            return (
+              <NavBlock currentPage={currentPage} navprefix={link} open={state[link.prefix].open} onClick={() => dispatch({ prefix: link.prefix, type: 'open'})}/>
+            );
+          } else { return (
+            <Link href={link.to} key={index}>
+              <LinkText selected={link.to === currentPage}>{link.label}</LinkText>
+            </Link>
+          )}
+        }
+        )}
       </LinkContainer>
     </Container>
   ) : (
@@ -164,11 +264,21 @@ const NavBar: React.FC<Props> = ({ selected }) =>  {
       </LinkContainer>
       <MobileNavMenuContainer open={navMenuOpen} onClick={closeMenu}>
         <MobileNavMenu>
-          {links.map((link, index) => (
-            <Link href={link.to} key={index}>
-              <LinkText selected={link.label.toLowerCase() === selected}>{link.label}</LinkText>
-            </Link>
-          ))}
+          {links.map((link, index) => {
+            if (isPrefix(link)) {
+              return link.routes.map((route, index) => (
+                <Link href={route.to} key={index}>
+                  <LinkText selected={route.to === currentPage}>{route.label}</LinkText>
+                </Link>
+              ))
+            } else {
+              return (
+                <Link href={link.to} key={index}>
+                  <LinkText selected={link.to === currentPage}>{link.label}</LinkText>
+                </Link>
+              );
+            }
+          })}
         </MobileNavMenu>
       </MobileNavMenuContainer>
     </Container>

@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
       <title>Canadian Hyperloop Conference</title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar  selected="home"/>
+      <NavBar />
       <PageContainer>
         <LandingSlide>
           <Typography variant="header">CANADIAN</Typography>
