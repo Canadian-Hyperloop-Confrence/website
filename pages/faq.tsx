@@ -43,7 +43,7 @@ const FAQ = () => {
         <title>Canadian Hyperloop Conference</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar selected="faq"/>
+      <NavBar />
       <PageContainer>
         <LandingSlide>
           <Header>FAQ</Header>

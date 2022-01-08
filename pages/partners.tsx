@@ -58,7 +58,7 @@ const Partners = () => {
         <title>Canadian Hyperloop Conference</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar selected="partners"/>
+      <NavBar />
       <PageContainer>
         <LandingSlide>
           <Header>PARTNERS AND SPONSORS</Header>

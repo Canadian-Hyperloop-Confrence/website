@@ -80,7 +80,7 @@ const Teams = () => {
         <title>Canadian Hyperloop Conference</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar selected="teams"/>
+      <NavBar />
       <PageContainer>
         <LandingSlide>
           <Header>TEAMS</Header>

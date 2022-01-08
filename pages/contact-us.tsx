@@ -53,7 +53,7 @@ const ContactUs = () => {
         <title>Canadian Hyperloop Conference</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar selected="contact us"/>
+      <NavBar />
       <PageContainer>
         <LandingSlide>
           <Header>CONTACT US</Header>
