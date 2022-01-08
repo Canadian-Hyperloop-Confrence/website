@@ -156,13 +156,10 @@ const Competition = () => {
           <table>
             <tbody>
               <tr>
-                <DateCell>January 3</DateCell><DashCell/><td><StyledLink href="https://docs.google.com/document/d/1JZqaaBXhBlp4ilnwsGbCr7fBs8HR09XC/edit">Letter of Intent Deadline</StyledLink></td>
+                <DateCell>January 3</DateCell><DashCell/><td><StyledLink href="https://docs.google.com/document/d/1JZqaaBXhBlp4ilnwsGbCr7fBs8HR09XC/edit?usp=sharing&ouid=110858179684358114709&rtpof=true&sd=true">Letter of Intent Deadline</StyledLink></td>
               </tr>
               <tr>
-                <DateCell>January 31</DateCell><DashCell/><td><StyledLink href="https://docs.google.com/document/d/1KFdxSfdHW0VUUvsWZSm0LwUaofQowU_VpjHrBWkfuyA/edit">White Paper Deadline</StyledLink></td>
-              </tr>
-              <tr>
-                <DateCell>January 31</DateCell><DashCell/><td>NDA Deadline</td>
+                <DateCell>January 31</DateCell><DashCell/><td><StyledLink href="https://docs.google.com/document/d/1KFdxSfdHW0VUUvsWZSm0LwUaofQowU_VpjHrBWkfuyA/edit?usp=sharing">White Paper Deadline</StyledLink></td>
               </tr>
               <tr>
                 <DateCell>February 15</DateCell><DashCell/><td>White Paper Feedback</td>
@@ -185,10 +182,7 @@ const Competition = () => {
           <table>
             <tbody>
               <tr>
-                <DateCell>January 31</DateCell><DashCell/><td><StyledLink href ="https://docs.google.com/document/d/1JZqaaBXhBlp4ilnwsGbCr7fBs8HR09XC/edit">Letter of Intent Deadline</StyledLink></td>
-              </tr>
-              <tr>
-                <DateCell>January 31</DateCell><DashCell/><td>NDA Deadline</td>
+                <DateCell>January 31</DateCell><DashCell/><td><StyledLink href ="https://docs.google.com/document/d/1JZqaaBXhBlp4ilnwsGbCr7fBs8HR09XC/edit?usp=sharing&ouid=110858179684358114709&rtpof=true&sd=true">Letter of Intent Deadline</StyledLink></td>
               </tr>
               <tr>
                 <DateCell>April 15</DateCell><DashCell/><td>Final Design Package Deadline</td>
