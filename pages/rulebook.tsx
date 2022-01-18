@@ -1,3 +1,3 @@
 import redirect from 'nextjs-redirect';
 
-export default redirect('/documents/CHC_Rulebook_1.0.pdf');
+export default redirect('/documents/CHC_Rulebook_1.1.pdf');
