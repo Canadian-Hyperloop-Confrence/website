@@ -1,5 +1,6 @@
-import React, { useMemo, useState, useEffect, useRef } from 'react';
+import React, { useMemo, useState, useEffect, useRef, useCallback } from 'react';
 import styled from 'styled-components';
+import useScreenSize from '../hooks/screen-size';
 
 const Clickable = styled.div``;
 
@@ -19,6 +20,23 @@ const Container = styled.div`
   max-width: calc(min(850px, 100vw));
 `;
 
+const CarouselLeft = styled.img.attrs({ src: '/carousel-left.svg'})`
+  cursor: pointer;
+  position: absolute;
+  left: -70px;
+  top: 50%;
+`;
+
+const CarouselRight = styled.img.attrs({ src: '/carousel-right.svg'})`
+  cursor: pointer;
+  position: absolute;
+  right: -70px;
+  top: 50%;
+`;
+
+const Parent = styled.div`
+  position: relative;
+`;
 
 function getThree<T>(array: Array<T>, centerIndex: number): Array<T> {
   if (centerIndex === 0 ) {
@@ -56,6 +74,7 @@ function Carousel<T>({
 }): React.ReactElement {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { width: windowWidth } = useScreenSize();
 
   const handleItemSelected = (index: number) => () => {
     console.log(index);
@@ -66,23 +85,23 @@ function Carousel<T>({
     console.log(activeIndex);
   }, [activeIndex])
 
-  useEffect(() => {
-    const moveCarousel = (direction: 'left' | 'right' | '') => {
-      switch (direction) {
-        case 'right':
-          setActiveIndex((prev) => (prev + 1) % items.length);
-          break;
-        case 'left':
-          setActiveIndex((prev) => {
-            const newValue = prev - 1;
-            if (newValue === -1) {
-              return items.length - 1
-            }
-            return newValue
-          });
-          break;
-      }
+  const moveCarousel = useCallback((direction: 'left' | 'right' | '') => {
+    switch (direction) {
+      case 'right':
+        setActiveIndex((prev) => (prev + 1) % items.length);
+        break;
+      case 'left':
+        setActiveIndex((prev) => {
+          const newValue = prev - 1;
+          if (newValue === -1) {
+            return items.length - 1
+          }
+          return newValue
+        });
+        break;
     }
+  }, [setActiveIndex]);
+  useEffect(() => {
     const handleWheel = (e: WheelEvent): void => {
       const {
         deltaX
@@ -121,7 +140,7 @@ function Carousel<T>({
 
       }
     }
-  }, [items, setActiveIndex])
+  }, [items, moveCarousel])
 
   const carouselElements = useMemo(() => items.map((item, index) => (
     <CarouselItemContainer
@@ -134,9 +153,15 @@ function Carousel<T>({
 
   const carouselItems = useMemo(() => getThree(carouselElements, activeIndex), [activeIndex, carouselElements]);
   return (
-    <Container ref={containerRef}>
-      {carouselItems}
-    </Container>
+    <Parent>
+      <Container ref={containerRef}>
+        {carouselItems}
+      </Container>
+      { windowWidth > 1000 && (<>
+        <CarouselLeft  onClick={() => moveCarousel('left')}/>
+        <CarouselRight onClick={() => moveCarousel('right')} />
+      </>)}
+    </Parent>
   );
 };
 

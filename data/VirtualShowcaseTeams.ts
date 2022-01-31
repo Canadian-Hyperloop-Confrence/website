@@ -4,7 +4,7 @@ const VirtualShowcaseTeams: VirtualShowcaseTeamPreview[] = [
       name: 'TransPod',
       logo: '/teams/transpod.png',
     },
-    category: 'Other',
+    category: 'Premium Partner',
     title: 'TransPod, by CTO and Co-Founder Ryan Janzen',
     presentationLink: 'https://www.youtube.com/watch?v=AgOgb19poRg'
   },
