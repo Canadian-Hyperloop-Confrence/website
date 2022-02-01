@@ -25,12 +25,13 @@ const byDate = (b: BlogCardData, a: BlogCardData): number => a.datePosted.year -
     ? a.datePosted.month - b.datePosted.month
     : a.datePosted.day - b.datePosted.day;
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetServerSideProps = async (context) => {
   const response = await fetch('https://portal.cahyperloop.ca/api/posts');
   const posts = await response.json();
 
   return {
-    props: { posts }
+    props: { posts },
+    revalidate: 60
   };
 }
 
