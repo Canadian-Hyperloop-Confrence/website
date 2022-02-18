@@ -10,7 +10,7 @@ const LinkContainer = styled.div`
   cursor: pointer;
 `;
 
-const LinkText = styled.p<{selected: boolean}>`
+const LinkTextV1 = styled.p<{selected: boolean}>`
   color: ${({ theme }): string => theme.palette.chcWhite};
   margin-left: 30px;
   ${({ selected }): FlattenInterpolation<ThemeProps<DefaultTheme>> => selected ? css`
@@ -21,8 +21,11 @@ const LinkText = styled.p<{selected: boolean}>`
   align-self: flex-start;
 `;
 
+const LinkTextV2 = styled(LinkTextV1)`
+  color: ${({ theme }): string => theme.palette.chcBlackA};
+`;
 
-const Container = styled.div`
+const ContainerV1 = styled.div`
   width: 100%;
   min-height: ${({ theme }): string => theme.constants.navbarHeight};
   height: fit-content;
@@ -41,6 +44,10 @@ const Container = styled.div`
   z-index: 10;
 `;
 
+const ContainerV2 = styled(ContainerV1)`
+  background-color: ${({ theme }): string => theme.palette.chcWhite};
+`;
+
 const MobileNavMenuContainer = styled.div<{ open: boolean}>`
   position: fixed;
   top: 0;
@@ -53,7 +60,7 @@ const MobileNavMenuContainer = styled.div<{ open: boolean}>`
   z-index: 10;
 `;
 
-const MobileNavMenu = styled.div`
+const MobileNavMenuV1 = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -67,11 +74,17 @@ const MobileNavMenu = styled.div`
 
   background-color: ${({ theme }): string => theme.palette.chcBlackA};
   opacity: 100%;
-  ${LinkText} {
+  ${LinkTextV1} {
     color: ${({ theme }):string => theme.palette.chcWhite};
     text-align: end;
   }
   z-index: 20;
+`;
+const MobileNavMenuV2 = styled(MobileNavMenuV1)`
+  background-color: ${({ theme }): string => theme.palette.chcWhite};
+  ${LinkTextV2} {
+    color: ${({ theme }):string => theme.palette.chcBlackA};
+  }
 `;
 
 const CHCLogo = styled.img.attrs({
@@ -83,10 +96,16 @@ const CHCLogo = styled.img.attrs({
 
 const ExtendedNavSection = styled.div`
   min-height: max-content;
-  ${LinkText}:first-child {
+  ${LinkTextV1}:first-child {
     padding-right: 4px;
   }
-  ${LinkText}:not(:first-child) {
+  ${LinkTextV1}:not(:first-child) {
+    margin-top: 0px;
+  }
+  ${LinkTextV2}:first-child {
+    padding-right: 4px;
+  }
+  ${LinkTextV2}:not(:first-child) {
     margin-top: 0px;
   }
 `;
@@ -161,14 +180,23 @@ const NavBlock = ({
   open,
   onClick,
   navprefix,
-  currentPage
+  currentPage,
+  version=1
 } : {
   open: boolean;
   onClick: () => void;
   navprefix: INavPrefix;
   currentPage: string;
-
+  version?: 1 | 2
 }): React.ReactElement => {
+  const [LinkText] = ((version_) => {
+    switch(version_) {
+      case 1:
+        return [LinkTextV1];
+      case 2:
+        return [LinkTextV2];
+    }
+  })(version);
   return (
     <ExtendedNavSection onClick={onClick}>
       <div style={{ display: 'flex' }}><LinkText className={open ? 'open' : ''} selected={!open && currentPage.startsWith(navprefix.prefix)}>{navprefix.label}</LinkText> <img src={open ? '/chevron-down.svg' : '/chevron-right.svg'}/></div>
@@ -208,7 +236,11 @@ const useScrollHandler = (onScroll: () => void) => {
   }, [onScroll]);
 }
 
-const NavBar = (): React.ReactElement =>  {
+interface Props {
+  version?: 1 | 2
+}
+
+const NavBar = ({ version=1 }: Props): React.ReactElement =>  {
   const theme = useTheme();
   const isDesktop = useBreakpoint(theme.breakPoints.desktop);
   const [navMenuOpen, setNavMenuOpen] = useState(false);
@@ -238,6 +270,15 @@ const NavBar = (): React.ReactElement =>  {
     setNavMenuOpen(false);
   }, [setNavMenuOpen]);
 
+  const [MobileNavMenu, Container, LinkText] = useMemo(() => {
+    switch(version) {
+      case 1:
+        return [MobileNavMenuV1, ContainerV1, LinkTextV1];
+      case 2:
+        return [MobileNavMenuV2, ContainerV2, LinkTextV2];
+    }
+  }, [version]);
+
   return isDesktop ? (
     <Container>
       <CHCLogo/>
@@ -245,7 +286,7 @@ const NavBar = (): React.ReactElement =>  {
         {links.map((link, index) => {
           if (isPrefix(link)) {
             return (
-              <NavBlock currentPage={currentPage} navprefix={link} open={state[link.prefix].open} onClick={() => dispatch({ prefix: link.prefix, type: 'open'})}/>
+              <NavBlock version={version} currentPage={currentPage} navprefix={link} open={state[link.prefix].open} onClick={() => dispatch({ prefix: link.prefix, type: 'open'})}/>
             );
           } else { return (
             <Link href={link.to} key={index}>

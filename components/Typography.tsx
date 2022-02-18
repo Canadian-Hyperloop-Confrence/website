@@ -23,8 +23,12 @@ const Body = styled.p`
   font: ${({ theme }): string => theme.typography.body.regular};
 `;
 
+const Hero = styled.p`
+  font: ${({ theme }): string => theme.typography.hero.semiBold};
+`;
+
 interface Props {
-  variant: 'body' | 'header' | 'title' | 'subtitle';
+  variant: 'body' | 'header' | 'title' | 'subtitle' | 'hero';
   children: ReactNode;
   className?: string;
   color?: 'red' | 'black';
@@ -36,6 +40,7 @@ const Typography: React.FC<Props> = ({ variant, children, className, color='blac
     case 'title':     return <Title className={`typography-${color} ${className} typography`}>{children}</Title>;
     case 'header':    return <Header className={`typography-${color} ${className} typography`}>{children}</Header>;
     case 'subtitle':  return <SubTitle className={`typography-${color} ${className} typography`}>{children}</SubTitle>;
+    case 'hero':  return <Hero className={`typography-${color} ${className} typography`}>{children}</Hero>;
   }
 }
 

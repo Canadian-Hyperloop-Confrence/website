@@ -3,7 +3,7 @@ import Section from './Section';
 import Typography from '../Typography';
 
 
-const PageContainer = styled.div`
+const PageContainerV1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,4 +30,24 @@ const PageContainer = styled.div`
   }
 `;
 
-export default PageContainer;
+
+const PageContainerV2 = styled(PageContainerV1)`
+  .section:nth-child(2n+1) {
+    background-color: ${({ theme }):string => theme.palette.chcWhite};
+    .typography-black{
+      color: ${({ theme }):string => theme.palette.chcBlackA};
+    }
+  }
+  .section:nth-child(2n) {
+    background-color: ${({ theme }):string => theme.palette.chcBlackA};
+    .typography-black {
+      color: ${({ theme }):string => theme.palette.chcWhite};
+    }
+    a {
+      color: ${({ theme }): string => theme.palette.blueA};
+    }
+  }
+`;
+
+
+export default ({version=1, children}: {version?: number, children: React.ReactNode}) => version === 1 ? <PageContainerV1>{children}</PageContainerV1> : <PageContainerV2>{children}</PageContainerV2> ;

@@ -23,6 +23,10 @@ const theme: DefaultTheme = {
       regular: '400 20px Questrial, "Open Sans"',
       semiBold: '600 20px Questrial, "Open Sans"',
     },
+    hero: {
+      regular: '400 80px Montserrat, "Open Sans"',
+      semiBold: '600 80px Montserrat, "Open Sans"',
+    },
     header: {
       regular: '400 40px Montserrat, "Open Sans"',
       semiBold: '600 40px Montserrat, "Open Sans"',

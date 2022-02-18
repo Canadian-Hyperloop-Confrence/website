@@ -19,6 +19,7 @@ declare module 'styled-components' {
       desktop: string;
     },
     typography: {
+      hero: ITypeface;
       header: ITypeface;
       title: ITypeface;
       body: ITypeface;
