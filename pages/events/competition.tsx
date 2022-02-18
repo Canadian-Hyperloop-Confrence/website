@@ -165,7 +165,7 @@ const Competition = () => {
                 <DateCell>February 15</DateCell><DashCell/><td>White Paper Feedback</td>
               </tr>
               <tr>
-                <DateCell>March 1</DateCell><DashCell/><td>Final Design Package Deadline</td>
+                <DateCell>March 7</DateCell><DashCell/><td>Final Design Package Deadline</td>
               </tr>
               <tr>
                 <DateCell>April 15</DateCell><DashCell/><td>Final Design Package Feedback</td>
