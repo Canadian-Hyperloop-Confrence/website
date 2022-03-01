@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useReducer, useState } from 're
 import styled, { css, DefaultTheme, FlattenInterpolation, ThemeProps, useTheme } from 'styled-components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import useBreakpoint from '../hooks/break-point';
 const LinkContainer = styled.div`
   height: 100%;
   margin-right: 60px;
@@ -155,21 +155,6 @@ function isPrefix(object: object): object is INavPrefix {
   return 'prefix' in object
 }
 
-const useBreakpoint = (breakpoint: string): boolean => {
-  const [biggerThanBreakPoint, setBiggerThanBreakPoint] = useState<boolean>(false);
-  const [size] = useState<number>(parseInt(breakpoint.slice(0, breakpoint.length-2), 10));
-  useEffect(() => {
-    setBiggerThanBreakPoint(window.innerWidth > size);
-    const resizeHandler = () => {
-      setBiggerThanBreakPoint(window.innerWidth > size)
-    }
-    window.addEventListener('resize', resizeHandler);
-    return function unMount() {
-      window.removeEventListener('resize', resizeHandler);
-    }
-  });
-  return biggerThanBreakPoint;
-}
 
 const useCurrentPage = (): string => {
   const { pathname } = useRouter();
