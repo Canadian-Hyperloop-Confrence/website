@@ -21,8 +21,15 @@ const LinkTextV1 = styled.p<{selected: boolean}>`
   align-self: flex-start;
 `;
 
-const LinkTextV2 = styled(LinkTextV1)`
+const LinkTextV2 = styled.p<{selected: boolean}>`
   color: ${({ theme }): string => theme.palette.chcBlackA};
+  margin-left: 30px;
+  ${({ selected }): FlattenInterpolation<ThemeProps<DefaultTheme>> => selected ? css`
+    border-bottom: 2px solid ${({ theme }): string => theme.palette.chcRed};
+  ` : css``}
+  cursor: pointer;
+  font: ${({ theme }): string => theme.typography.nav.regular};
+  align-self: flex-start;
 `;
 
 const ContainerV1 = styled.div`
@@ -299,9 +306,7 @@ const NavBar = ({ version=1 }: Props): React.ReactElement =>  {
     <Container>
       <CHCLogo/>
       <LinkContainer>
-        <img style={{
-          filter: version === 1 ? 'invert(0)' : 'invert(1)' 
-        }} src="/menu.svg"  onClick={openMenu}/>
+        <img src="/menu.svg"  onClick={openMenu}/>
       </LinkContainer>
       <MobileNavMenuContainer open={navMenuOpen} onClick={closeMenu}>
         <MobileNavMenu>
