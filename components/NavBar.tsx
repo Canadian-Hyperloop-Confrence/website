@@ -110,6 +110,10 @@ const ExtendedNavSection = styled.div`
   }
 `;
 
+const FloatingContainer = styled.div`
+  position: fixed;
+`;
+
 const links: (INavLink | INavPrefix)[] = [
   {
     label: 'Home',
@@ -174,24 +178,33 @@ const NavBlock = ({
   currentPage: string;
   version?: 1 | 2
 }): React.ReactElement => {
-  const [LinkText] = ((version_) => {
-    switch(version_) {
+  const [LinkText] = useMemo(() => {
+    switch(version) {
       case 1:
         return [LinkTextV1];
       case 2:
         return [LinkTextV2];
     }
-  })(version);
+  }, [version]);
   return (
     <ExtendedNavSection onClick={onClick}>
-      <div style={{ display: 'flex' }}><LinkText className={open ? 'open' : ''} selected={!open && currentPage.startsWith(navprefix.prefix)}>{navprefix.label}</LinkText> <img src={open ? '/chevron-down.svg' : '/chevron-right.svg'}/></div>
-      { open &&
-        navprefix.routes.map((link, index) => (
-          <Link href={link.to} key={index}>
-            <LinkText selected={link.to === currentPage}>{link.label}</LinkText>
-          </Link>
-        ))
-      }
+      <div style={{ display: 'flex' }}>
+        <LinkText className={open ? 'open' : ''} selected={!open && currentPage.startsWith(navprefix.prefix)}>
+          {navprefix.label}
+        </LinkText>
+        <img style={{
+          filter: version === 1 ? 'invert(0)' : 'invert(1)' 
+        }} src={open ? '/chevron-down.svg' : '/chevron-right.svg'}/>
+      </div>
+      <FloatingContainer>
+        { open &&
+          navprefix.routes.map((link, index) => (
+            <Link href={link.to} key={index}>
+              <LinkText selected={link.to === currentPage}>{link.label}</LinkText>
+            </Link>
+          ))
+        }
+      </FloatingContainer>
     </ExtendedNavSection>
   )
 }
@@ -286,7 +299,9 @@ const NavBar = ({ version=1 }: Props): React.ReactElement =>  {
     <Container>
       <CHCLogo/>
       <LinkContainer>
-        <img src="/menu.svg" onClick={openMenu}/>
+        <img style={{
+          filter: version === 1 ? 'invert(0)' : 'invert(1)' 
+        }} src="/menu.svg"  onClick={openMenu}/>
       </LinkContainer>
       <MobileNavMenuContainer open={navMenuOpen} onClick={closeMenu}>
         <MobileNavMenu>
