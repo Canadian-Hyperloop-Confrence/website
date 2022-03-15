@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hyperloop Talks</title>
         <link>https://www.youtube.com/channel/UCYC--3qbnPwe1NMiiBiLCQw</link>
@@ -7,14 +7,16 @@
 
             For more information or if you have any questions, please feel free to contact chc@cahyperloop.ca.</description>
         <language>en-ca</language>
+        <atom:link href="https://www.cahyperloop.ca/hyperloop-talks.xml" rel="self" type="application/rss+xml" />
         <item>
             <title>Hyperloop Talks Ft. Benjamin Busca and Adam Rosenblum</title>
-            <pubDate>Mon 28 Feb 2022 13:00:00 EST</pubDate>
+            <pubDate>Mon, 28 Feb 2022 13:00:00 EST</pubDate>
             <link>https://www.youtube.com/watch?v=U1SlQdLPkqs</link>
+            <guid>https://www.youtube.com/watch?v=U1SlQdLPkqs</guid>
             <description>CHC conducted a Hyperloop Talks with Benjamin Busca and Adam Rosenblum, civil engineering students and Waterloop's Infrastructure Leads, who manages Waterloop's Infrastructure Team and works with other Waterloop teams. 
 
                 They answer many questions related to their current experiences and shares their knowledge and tips for Hyperloop members and future members. </description>
-            <author>Isabella Lee</author>
+            <author>chc@cahyperloop.ca</author>
             <category>Science and Technology</category>
         </item>
     </channel>
