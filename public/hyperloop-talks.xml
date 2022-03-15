@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Hyperloop Talks</title>
+        <link>https://www.youtube.com/channel/UCYC--3qbnPwe1NMiiBiLCQw</link>
+        <description>Hyperloop Talks is a series of social media events in which we interview an experienced individual in the hyperloop community to shed light on personal experiences. This social media event aims to highlight the people within CHC and CHC's partners, gauge audience interest on different levels. Hyperloop Talks is similar to Humans of New York as it focuses more on the personal side of the hyperloop rather than the formal business side. Thus, the questions offer a perspective from the people who are committed or active on the hyperloop. Hyperloop Talks is also a way to incorporate stories from different CHC founding teams.  
+
+            For more information or if you have any questions, please feel free to contact chc@cahyperloop.ca.</description>
+        <language>en-ca</language>
+        <item>
+            <title>Hyperloop Talks Ft. Benjamin Busca and Adam Rosenblum</title>
+            <pubDate>Feb 28, 2022</pubDate>
+            <link>https://www.youtube.com/watch?v=U1SlQdLPkqs</link>
+            <description>CHC conducted a Hyperloop Talks with Benjamin Busca and Adam Rosenblum, civil engineering students and Waterloop's Infrastructure Leads, who manages Waterloop's Infrastructure Team and works with other Waterloop teams. 
+
+                They answer many questions related to their current experiences and shares their knowledge and tips for Hyperloop members and future members. </description>
+            <author>Isabella Lee</author>
+            <category>Science and Technology</category>
+        </item>
+    </channel>
+</rss>
