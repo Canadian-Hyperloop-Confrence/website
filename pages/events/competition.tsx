@@ -114,6 +114,16 @@ const StyledLink = styled.a`
   }
 `;
 
+const LinkContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  button {
+    margin-right: 8px;
+  }
+`;
+
 const Competition = () => {
   return (
     <div>
@@ -128,7 +138,7 @@ const Competition = () => {
         </LandingSlide>
         <Section>
           <BodyCenteredStrong>
-            The 2022 Canadian Hyperloop Competition is currently open for applications!
+            Applications for the 2022 Canadian Hyperloop Competition is currently closed.
           </BodyCenteredStrong>
           <BodyCentered>
             The Timeline presented here is tentative, and may be subjected to change.
@@ -136,6 +146,12 @@ const Competition = () => {
           <BodyCentered>
             The 2022 CHC competition will be an in-person event in June 2022 that takes place at the University of Waterloo in Waterloo, Ontario Canada. University teams from across Canada and internationally are welcomed to apply and to participate. CHC will be holding two competitions during the in-person event.
           </BodyCentered>
+            <LinkContainer>
+              <Link href="/rulebook"><Button>Rulebook</Button></Link>
+              <Link href="/documents/CHC 2022_Final Design Package Criteria 1.1.pdf"><Button>Final Design Package</Button></Link>
+              {/* <Link href="/rulebook"><Button>Testing and Safety</Button></Link> */}
+              <Link href="/documents/CHC_Awards_Descriptions.pdf"><Button>Awards</Button></Link>
+            </LinkContainer>
           <Title>
             Competitions
           </Title>
@@ -149,6 +165,10 @@ const Competition = () => {
           <Body>
             Please <StyledLink href="https://cahyperloop.us5.list-manage.com/subscribe?u=ff0cb954d24bd916e6784d258&id=2f43d4e751](https://cahyperloop.us5.list-manage.com/subscribe?u=ff0cb954d24bd916e6784d258&id=2f43d4e751">sign up</StyledLink> for our newsletter to stay in touch with the latest updates in terms of requirements and deadlines, or email technical@cahyperloop.ca if you have any specific concerns.
           </Body>
+          <Title>Competition Application Submission Guide</Title>
+          <Body>Each team has to fill <StyledLink href="https://docs.google.com/forms/d/1qDiGkUOfxa4JaC_3H_05OUiLizKTFy5kqQXxr6NfD6U/edit">this survey</StyledLink> in order to submit their documents. Please refer to the rulebook documentation section for further information.</Body>
+          <Body>The rulebook outlines all the rules and requirements for all teams participating in the in-person event. </Body>
+          <Body>The Rulebook is subject to change at any time, participating teams will be notified if any changes occur throughout the application stage and during the in-person event. All submissions, including the White Paper and Final Design Package, for the 2022 CHC Competition should abide to all the rules and terms listed in the 2022 CHC Competition Rulebook. CHC reserves the right to reject teams who do not meet the requirements as listed. </Body>
           <Title>Track Demonstration</Title>
           <Body>
           The Track Demonstration is intended for teams who will have their entire hyperloop pod ready prior to the 2022 CHC competition date to demonstrate the full operations of the pod on our test track. Teams who will compete in the Track Demonstration will be required to transport their pod to the Waterloo test track site and perform a test prior to the in-person event. Teams participating in the Track Demonstration will be automatically considered for the 2022 CHC competition awards by submitting the Final Design Package. Below are the documents required and deadlines to apply for the Track Demonstration.
@@ -171,7 +191,7 @@ const Competition = () => {
                 <DateCell>April 15</DateCell><DashCell/><td>Final Design Package Feedback</td>
               </tr>
               <tr>
-                <DateCell>May-June</DateCell><DashCell/><td>1-on-1 Design Review Meetings</td>
+                <DateCell>May</DateCell><DashCell/><td>1-on-1 Design Review Meetings</td>
               </tr>
             </tbody>
           </table>
@@ -191,15 +211,10 @@ const Competition = () => {
                 <DateCell>April 30</DateCell><DashCell/><td>Final Design Package Feedback</td>
               </tr>
               <tr>
-                <DateCell>May-June</DateCell><DashCell/><td>1-on-1 Design Review Meetings</td>
+                <DateCell>May</DateCell><DashCell/><td>1-on-1 Design Review Meetings</td>
               </tr>
             </tbody>
           </table>
-          <Title>Competition Application Submission Guide</Title>
-          <Body>Each team has to fill <StyledLink href="https://docs.google.com/forms/d/1qDiGkUOfxa4JaC_3H_05OUiLizKTFy5kqQXxr6NfD6U/edit">this survey</StyledLink> in order to submit their documents. Please refer to the rulebook documentation section for further information.</Body>
-          <Body>The rulebook outlines all the rules and requirements for all teams participating in the in-person event. </Body>
-          <Body>The Rulebook is subject to change at any time, participating teams will be notified if any changes occur throughout the application stage and during the in-person event. All submissions, including the White Paper and Final Design Package, for the 2022 CHC Competition should abide to all the rules and terms listed in the 2022 CHC Competition Rulebook. CHC reserves the right to reject teams who do not meet the requirements as listed. </Body>
-          <Link href="/rulebook"><Button>Rulebook</Button></Link>
         </Section>
       </PageContainer>
     </div>
