@@ -144,7 +144,7 @@ const Competition = () => {
             The Timeline presented here is tentative, and may be subjected to change.
           </BodyCentered>
           <BodyCentered>
-            The 2022 CHC competition will be an in-person event in June 2022 that takes place at the University of Waterloo in Waterloo, Ontario Canada. University teams from across Canada and internationally are welcomed to apply and to participate. CHC will be holding two competitions during the in-person event.
+            The 2022 CHC competition will be an in-person event in May 2022 that takes place at the University of Waterloo in Waterloo, Ontario Canada. University teams from across Canada and internationally are welcomed to apply and to participate. CHC will be holding two competitions during the in-person event.
           </BodyCentered>
             <LinkContainer>
               <Link href="/rulebook"><Button>Rulebook</Button></Link>
