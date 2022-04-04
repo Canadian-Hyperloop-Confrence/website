@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import React from 'react'
 import { LandingSlide, PageContainer as UPageContainer, Section as USection } from "../../components/layout";
 import NavBar from '../../components/NavBar';
@@ -124,7 +124,33 @@ const LinkContainer = styled.div`
   }
 `;
 
+const AwardTable = styled.table`
+  thead tr th {
+    background-color: ${({ theme }) => theme.palette.greys[4]};
+    border-bottom: 2px solid ${({ theme }) => theme.palette.greys[3]};
+    border-left: 2px solid ${({ theme }) => theme.palette.greys[3]};
+  }
+  thead tr :first-child {
+    border-left: 2px solid ${({ theme }) => theme.palette.greys[4]};
+  }
+  border-spacing: 0;
+  * {
+    margin: 4px;
+    text-align: center;
+  }
+  td {
+    height: 60px;
+  }
+  border: 2px solid ${({ theme }) => theme.palette.greys[4]};
+  border-bottom: 1px;
+  td {
+    border-bottom: 2px solid ${({ theme }) => theme.palette.greys[3]};
+    border-left: 2px solid ${({ theme }) => theme.palette.greys[3]};
+  }
+`;
+
 const Competition = () => {
+  const theme = useTheme();
   return (
     <div>
       <Head>
@@ -215,6 +241,80 @@ const Competition = () => {
               </tr>
             </tbody>
           </table>
+          <Title>Awards Summary</Title>
+          <Body>
+            The following is an overview of what awards may be handed out during competition. All participating teams should familiarize themselves with these. For full details, please refer to the awards document linked at the top of this page.
+          </Body>
+          <AwardTable>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name of Award</th>
+                <th>Summary</th>
+                <th>Application Documents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td 
+                  rowSpan={6}
+                  style={{
+                    backgroundColor: theme.palette.greys[4],
+                    verticalAlign: 'top',
+                    fontWeight: 'bold',
+                    paddingTop: '2px',
+                    borderLeft: `2px solid ${theme.palette.greys[4]}`
+                  }}>Pod Showcase Awards</td>
+                <td>High Power Award</td>
+                <td>Recognizes outstanding battery and ESC design</td>
+                <td>Pod Showcase and/or Track Demonstration Registration</td>
+              </tr>
+              <tr>
+                <td>Low Power Award</td>
+                <td>Recognizes the best low power system component (hardware, firmware, or software)</td>
+                <td>Pod Showcase and/or Track Demonstration Registration</td>
+              </tr>
+              <tr>
+                <td>Mechanical Award</td>
+                <td>Recognizes the best mechanical design and manufacturing of mechanical parts</td>
+                <td>Pod Showcase and/or Track Demonstration Registration</td>
+              </tr>
+              <tr>
+                <td>Areoshell Award</td>
+                <td>Recognizes outstanding design, analysis, and construction of hyperloop areoshell.</td>
+                <td>Pod Showcase and/or Track Demonstration Registration</td>
+              </tr>
+              <tr>
+                <td>Propulsion and Levitation Award</td>
+                <td>Recognizes outstanding gearbox or levitation design</td>
+                <td>Pod Showcase and/or Track Demonstration Registration</td>
+              </tr>
+              <tr>
+                <td>Best Pod Award</td>
+                <td>Recognizes best overall pod</td>
+                <td>Pod Showcase <strong>and</strong> Track Demonstration Registration</td>
+              </tr>
+              <tr>
+                <td 
+                  rowSpan={2}
+                  style={{
+                    backgroundColor: theme.palette.greys[4],
+                    verticalAlign: 'top',
+                    fontWeight: 'bold',
+                    paddingTop: '2px',
+                    borderLeft: `2px solid ${theme.palette.greys[4]}`,
+                  }}>Non-Technical Awards</td>
+                <td>Growth Award</td>
+                <td>Recognizes a team that has implemented changes to become a better team</td>
+                <td>Additional Application</td>
+              </tr>
+              <tr>
+                <td>Leader Award</td>
+                <td>Recognizes a team lead nominated by team members</td>
+                <td>Additional Application</td>
+              </tr>
+            </tbody>
+          </AwardTable>
         </Section>
       </PageContainer>
     </div>
