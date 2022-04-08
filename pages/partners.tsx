@@ -48,8 +48,8 @@ const Partners = () => {
     window.open('mailto:business@cahyperloop.ca?subject=Become a Sponsor');
   }
 
-  const partnerImages = PartnersData.map((partner) => <a href={partner.link} key={partner.imageSrc}><img src={partner.imageSrc} alt={partner.altText} /></a>);
-  const sponsorImages = Sponsors.map((sponsor) => <a href={sponsor.link} key={sponsor.imageSrc}><img src={sponsor.imageSrc} alt={sponsor.altText} /></a>);
+  const partnerImages = PartnersData.map((partner) => <a href={partner.link} key={partner.imageSrc}><img src={partner.imageSrc} alt={partner.altText} style={{ maxWidth: '225px' }}/></a>);
+  const sponsorImages = Sponsors.map((sponsor) => <a href={sponsor.link} key={sponsor.imageSrc}><img src={sponsor.imageSrc} alt={sponsor.altText} style={{ maxWidth: '225px' }}/></a>);
 
 
   return (
