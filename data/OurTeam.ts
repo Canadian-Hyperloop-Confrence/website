@@ -59,16 +59,6 @@ const OurTeam: TeamMemberHeadshot[] = [
     position: 'Events Team Member',
     img: '/our-team/justin-tsai.jpg'
   },
-  {
-    name: 'Hafsah Farooqui',
-    position: 'Finance Lead',
-    img: '/our-team/hafsah-farooqui.jpg'
-  },
-  {
-    name: 'Selina Huang',
-    position: 'Technical team member',
-    img: '/our-team/selina-huang.jpeg'
-  },
 ]
 
 export default OurTeam;
