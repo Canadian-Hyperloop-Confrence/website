@@ -59,6 +59,11 @@ const OurTeam: TeamMemberHeadshot[] = [
     position: 'Events Team Member',
     img: '/our-team/justin-tsai.jpg'
   },
+  {
+    name: 'Pranay Karkale',
+    position: 'Technical Team - Co Lead',
+    img: '/our-team/pranay.jpg'
+  }
 ]
 
 export default OurTeam;
