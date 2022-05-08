@@ -154,7 +154,6 @@ const JurorItem = styled.div`
   flex-direction: row;
   div {
     min-width: 50%;
-    max-width: 50%;
     height: auto;
   }
 `;
@@ -347,7 +346,7 @@ const Competition = () => {
           </AwardTable>
           <Title>Jury Members</Title>
           <Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur lorem donec massa sapien faucibus et molestie. Volutpat sed cras ornare arcu. Aliquet eget sit amet tellus cras. Eget egestas purus viverra accumsan in nisl. A erat nam at lectus urna. Eu facilisis sed odio morbi quis commodo odio aenean sed. At varius vel pharetra vel turpis nunc eget. Vitae tortor condimentum lacinia quis vel eros. Lorem donec massa sapien faucibus. Gravida rutrum quisque non tellus orci ac. Ut morbi tincidunt augue interdum. In fermentum posuere urna nec. Orci sagittis eu volutpat odio facilisis. Erat velit scelerisque in dictum.
+            The Canadian Hyperloop Conference is proud to present our world class team of Technology Leaders who will be evaluating the teams at this year's track competition.
           </Body>
           <JurorList>
             <JurorItem>
@@ -446,6 +445,17 @@ const Competition = () => {
                 <Body><strong>Fue-Sang Lien</strong></Body>
                 <Body>University of Waterloo</Body>
                 <Body>Professor</Body>
+                <Body>Mechanical &amp; Aero Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                <img src='/jurors/abstract-user.png'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Varad Deshpande</strong></Body>
+                <Body>Swisspod Technologies SA</Body>
+                <Body>Battery System Development Engineer</Body>
                 <Body>Mechanical &amp; Aero Juror</Body>
               </JurorInfo>
             </JurorItem>
