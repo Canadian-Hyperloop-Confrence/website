@@ -149,6 +149,44 @@ const AwardTable = styled.table`
   }
 `;
 
+const JurorItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  div {
+    min-width: 50%;
+    height: auto;
+  }
+`;
+
+const JurorInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
+const JurorList = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  ${JurorItem}:nth-child(odd) {
+    flex-direction: row-reverse;
+    ${JurorInfo} {
+      align-items: flex-start;
+    }
+  }
+`;
+
+const JurorImageFrame = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
 const Competition = () => {
   const theme = useTheme();
   return (
@@ -169,15 +207,6 @@ const Competition = () => {
           <BodyCentered>
             The Timeline presented here is tentative, and may be subjected to change.
           </BodyCentered>
-          <BodyCentered>
-            The 2022 CHC competition will be an in-person event in May 2022 that takes place at the University of Waterloo in Waterloo, Ontario Canada. University teams from across Canada and internationally are welcomed to apply and to participate. CHC will be holding two competitions during the in-person event.
-          </BodyCentered>
-            <LinkContainer>
-              <Link href="/rulebook"><Button>Rulebook</Button></Link>
-              <Link href="/documents/CHC 2022_Final Design Package Criteria 1.1.pdf"><Button>Final Design Package</Button></Link>
-              {/* <Link href="/rulebook"><Button>Testing and Safety</Button></Link> */}
-              <Link href="/documents/CHC_Awards_Descriptions.pdf"><Button>Awards</Button></Link>
-            </LinkContainer>
           <Title>
             Competitions
           </Title>
@@ -256,7 +285,7 @@ const Competition = () => {
             </thead>
             <tbody>
               <tr>
-                <td 
+                <td
                   rowSpan={6}
                   style={{
                     backgroundColor: theme.palette.greys[4],
@@ -295,7 +324,7 @@ const Competition = () => {
                 <td>Pod Showcase <strong>and</strong> Track Demonstration Registration</td>
               </tr>
               <tr>
-                <td 
+                <td
                   rowSpan={2}
                   style={{
                     backgroundColor: theme.palette.greys[4],
@@ -315,6 +344,122 @@ const Competition = () => {
               </tr>
             </tbody>
           </AwardTable>
+          <Title>Jury Members</Title>
+          <Body>
+            The Canadian Hyperloop Conference is proud to present our world class team of Technology Leaders who will be evaluating the teams at this year's track competition.
+          </Body>
+          <JurorList>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/rajdeep.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Rajdeep Deb</strong></Body>
+                <Body>EuroTube Foundation</Body>
+                <Body>Senior R&D and Dynamics Engineer</Body>
+                <Body>Mechanical Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/jack.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Jack Demeter</strong></Body>
+                <Body>Tesla</Body>
+                <Body>QA Engineer</Body>
+                <Body>Electronics &amp; Software Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/mohammed.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Mohammed Nassar</strong></Body>
+                <Body>University of Waterloo</Body>
+                <Body>Lecturer</Body>
+                <Body>Electronics &amp; Software Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/antoine.png'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Antoine Juge</strong></Body>
+                <Body>EuroTube Foundation</Body>
+                <Body>R&amp;D Power System Engineer</Body>
+                <Body>Propulsion Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/harshit.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Harshit Madaan</strong></Body>
+                <Body>Patriot One Technologies Inc.</Body>
+                <Body>Electronics Design Engineer</Body>
+                <Body>Propulsion Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/teodor.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Teodor Rosca</strong></Body>
+                <Body>Swisspod Technologies SA</Body>
+                <Body>Lead Engineer</Body>
+                <Body>Electronics &amp; Software Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/clive.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Clive Chan</strong></Body>
+                <Body>Tesla</Body>
+                <Body>Senior Deep Learning InfrastructureEngineer</Body>
+                <Body>Electronics &amp; Software Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/aniruddha.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Aniruddha Atigre</strong></Body>
+                <Body>QuinTrans Hyperloop</Body>
+                <Body>CTO, Co-Founder</Body>
+                <Body>Propulsion &amp; Levitation Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                  <img src='/jurors/lien.jpg'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Fue-Sang Lien</strong></Body>
+                <Body>University of Waterloo</Body>
+                <Body>Professor</Body>
+                <Body>Mechanical &amp; Aero Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+            <JurorItem>
+              <JurorImageFrame>
+                <img src='/jurors/abstract-user.png'/>
+              </JurorImageFrame>
+              <JurorInfo>
+                <Body><strong>Varad Deshpande</strong></Body>
+                <Body>Swisspod Technologies SA</Body>
+                <Body>Battery System Development Engineer</Body>
+                <Body>Mechanical &amp; Aero Juror</Body>
+              </JurorInfo>
+            </JurorItem>
+          </JurorList>
         </Section>
       </PageContainer>
     </div>
