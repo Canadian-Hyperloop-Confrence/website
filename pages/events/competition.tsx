@@ -187,6 +187,16 @@ const JurorImageFrame = styled.div`
   }
 `;
 
+const WorkshopBody = styled(Body)`
+  padding: 16px;
+  color:${({ theme }) => theme.palette.chcWhite } !important;
+  background-color: ${({ theme }) => theme.palette.chcBlackB};
+
+  strong {
+    color: ${({ theme }) => theme.palette.chcRed };
+  }
+`;
+
 const Competition = () => {
   const theme = useTheme();
   return (
@@ -344,6 +354,151 @@ const Competition = () => {
               </tr>
             </tbody>
           </AwardTable>
+          <section id="keynote" style={{ width: '100%'}}>
+            <Title>Keynote Speaker</Title>
+            <JurorList>
+              <JurorItem/> {/* Flips Ryan's photo to the right hand side */}
+              <JurorItem>
+                <JurorImageFrame>
+                  <img src='/keynotes/ryan-janzen.png'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                    <Body><strong>Ryan Janzen</strong></Body>
+                    <Body>CTO Transpod</Body>
+                </JurorInfo>
+              </JurorItem>
+            </JurorList>
+          </section>
+          <section id="workshops" style={{ width: '100%'}}>
+            <Title>Workshops</Title>
+            <JurorList>
+              <JurorItem>
+                <JurorImageFrame>
+                    <img src='/workshops/hyper_map.jpg'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                  <Body><strong>Zak</strong></Body>
+                  <Body>Hyper Map</Body>
+                  <Body>Founder</Body>
+                </JurorInfo>
+              </JurorItem>
+              <WorkshopBody>
+                Zak will be speaking about:
+                <ul>
+                  <li>Background and <strong>Mission of the Hyper Map team</strong></li>
+                  <li>Review recent hyperloop industry milestones</li>
+                  <li>Idea of MVP approach to hyperloop implementation and expansion</li>
+                  <li>Preview of new hyperloop app</li>
+                </ul>
+              </WorkshopBody>
+              <JurorItem>
+                <JurorImageFrame>
+                    <img src='/workshops/arda.jpg'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                  <Body><strong>Arda Erturk</strong></Body>
+                  <Body>Roll Technologies</Body>
+                  <Body>Co-Founder</Body>
+                </JurorInfo>
+              </JurorItem>
+              <WorkshopBody>
+                Arda will be speaking about:
+                <ul>
+                  <li>
+                    <strong>Starting a company</strong> in the transportation industry
+                  </li>
+                  <li>
+                    Challenges related to the above (regulatory, competition)
+                  </li>
+                  <li>
+                    Provincial and federal support
+                  </li>
+                  <li>
+                    Discussion about entrepreneurship
+                  </li>
+                </ul>
+              </WorkshopBody>
+              <JurorItem>
+                <JurorImageFrame>
+                    <img src='/workshops/iqbal-badruddin.jpg'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                  <Body><strong>Iqbal Badruddin Jamal</strong></Body>
+                  <Body>Fridays for Future</Body>
+                  <Body>Lead/Founder FFF Pakistan Chapter</Body>
+                </JurorInfo>
+              </JurorItem>
+              <WorkshopBody>
+                Iqbal will be speaking about:
+                <ul>
+                  <li>
+                    <strong>Climate Change</strong> and a need to adopt sustainable technologies.
+                  </li>
+                  <li>
+                    Hyperloop and its impacts
+                  </li>
+                  <li>
+                    How Hyper Loop provides lower environmental impact than other modes of mass transportation
+                  </li>
+                  <li>
+                    How we could increase awareness regarding such innovation in todays world.
+                  </li>
+                  <li>
+                    How a world will look like with Hyperloop as a major form of transport (Win-Win) for Environment.
+                  </li>
+                </ul>
+              </WorkshopBody>
+              <JurorItem>
+                <JurorImageFrame>
+                    <img src='/workshops/daniel-desjardins.png'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                  <Body><strong>Dan Desjardins</strong></Body>
+                  <Body>Distributive</Body>
+                  <Body>CEO</Body>
+                </JurorInfo>
+              </JurorItem>
+              <WorkshopBody>
+                Dan will be discussing a <strong>High Throughput Computing</strong> platform for advanced research computing. One demonstrated use case will involve maglev hyperloop computational simulations for thrust and levitation
+              </WorkshopBody>
+              <JurorItem>
+                <JurorImageFrame>
+                    <img src='/workshops/mini-gupta.jpg'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                  <Body><strong>Mini Gupta</strong></Body>
+                  <Body>Metrolinx</Body>
+                  <Body>Director - Systems</Body>
+                </JurorInfo>
+              </JurorItem>
+              <WorkshopBody>
+                Mini will be speaking about the <strong>Role of Engineers</strong> beyond Product Design
+              </WorkshopBody>
+              <JurorItem>
+                <JurorImageFrame>
+                    <img src='/jurors/abstract-user.png'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                  <Body><strong>Chanuphon Trakarnchaiyo</strong></Body>
+                  <Body>Maglev Microrobotics Laboratory</Body>
+                  <Body>University of Waterloo</Body>
+                  <Body>PhD student</Body>
+                </JurorInfo>
+              </JurorItem>
+              <WorkshopBody>
+                Chanuphon will be giving a general <strong>overview of the maglev microrobotics laboratory's</strong> activities. He will also be providing research progress on the magnetic levitation floor in RoboHub.
+              </WorkshopBody>
+              <JurorItem>
+                <JurorImageFrame>
+                    <img src='/workshops/mike-morrice.png'/>
+                </JurorImageFrame>
+                <JurorInfo>
+                  <Body><strong>Mike Morrice</strong></Body>
+                  <Body>MP for the Green Party of Canada</Body>
+                </JurorInfo>
+              </JurorItem>
+            </JurorList>
+          </section>
           <Title>Jury Members</Title>
           <Body>
             The Canadian Hyperloop Conference is proud to present our world class team of Technology Leaders who will be evaluating the teams at this year's track competition.
