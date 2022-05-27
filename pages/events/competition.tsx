@@ -605,7 +605,7 @@ const Competition = () => {
             </JurorItem>
             <JurorItem>
               <JurorImageFrame>
-                <img src='/jurors/abstract-user.png'/>
+                <img src='/jurors/varad-deshpande.jpg'/>
               </JurorImageFrame>
               <JurorInfo>
                 <Body><strong>Varad Deshpande</strong></Body>
