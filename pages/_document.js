@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"/>
-                <!-- Hotjar Tracking Code for https://www.cahyperloop.ca/ -->
+      {/*<!-- Hotjar Tracking Code for https://www.cahyperloop.ca/ -->*/}
           <script>
               (function(h,o,t,j,a,r){
                   h.hj=h.hjfunction(){(h.hj.q=h.hj.q[]).push(arguments)};
