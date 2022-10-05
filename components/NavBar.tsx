@@ -3,6 +3,7 @@ import styled, { css, DefaultTheme, FlattenInterpolation, ThemeProps, useTheme }
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useBreakpoint from '../hooks/break-point';
+
 const LinkContainer = styled.div`
   height: 100%;
   margin-right: 60px;
@@ -87,6 +88,7 @@ const MobileNavMenuV1 = styled.div`
   }
   z-index: 20;
 `;
+
 const MobileNavMenuV2 = styled(MobileNavMenuV1)`
   background-color: ${({ theme }): string => theme.palette.chcWhite};
   ${LinkTextV2} {
@@ -135,8 +137,12 @@ const links: (INavLink | INavPrefix)[] = [
     label: 'Events',
     routes: [
       {
-        label: 'Virtual Showcase',
+        label: 'Virtual Showcase 2022',
         to: '/events/virtual-showcase'
+      },
+      {
+        label: 'Virtual Showcase 2021',
+        to: '/events/virtual-showcase-2021'
       },
       {
         label: 'Competition',
@@ -200,7 +206,7 @@ const NavBlock = ({
           {navprefix.label}
         </LinkText>
         <img style={{
-          filter: version === 1 ? 'invert(0)' : 'invert(1)' 
+          filter: version === 1 ? 'invert(0)' : 'invert(1)'
         }} src={open ? '/chevron-down.svg' : '/chevron-right.svg'}/>
       </div>
       <FloatingContainer>
