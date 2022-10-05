@@ -11,6 +11,8 @@ import { useEffect } from 'react';
 import Carousel from '../../components/Carousel';
 import VirtualShowcaseTeams from '../../data/VirtualShowcaseTeams';
 import VirtualShowcaseTeamCard from '../../components/VirtualShowcaseTeamCard';
+import Button from '../../components/Button';
+import Files from '../../data/files';
 
 const Header = styled(Typography).attrs({
   variant: 'header'
@@ -30,47 +32,6 @@ const P = styled(Typography).attrs({
 const H1 = styled(Typography).attrs({
   variant: 'title'
 })``;
-
-const RedSubTitle = styled.h3`
-  color: ${({ theme }): string => theme.palette.chcRed};
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 26px;
-  letter-spacing: 0.06em;
-  text-align: justified;
-
-  display: inline;
-`;
-
-const ApplicationProcessList = styled.ol`
-  color: ${({ theme }): string => theme.palette.chcRed};
-
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 26px;
-  letter-spacing: 0.06em;
-  text-align: justified;
-
-  ol {
-    color: ${({ theme }): string => theme.palette.chcBlackA};
-    font-family: Questrial;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0.06em;
-    text-align: justified;
-  }
-
-  ul {
-    color: ${({ theme }): string => theme.palette.chcBlackA};
-    list-style-type: disc;
-  }
-`;
 
 const BackToTop = styled.div`
   width: 30px;
@@ -101,10 +62,13 @@ const BackToTop = styled.div`
   transition: bottom 0.5s;
 `;
 
-const CalendarSpan = styled.span`
+const Downloads = styled.div`
   display: flex;
-  p {
-    padding-left: 8px;
+  flex-direction: column;
+  margin-top: -32px;
+  ${Button} {
+    margin-bottom: 8px;
+    font-family: Montserrat;
   }
 `;
 
@@ -142,76 +106,56 @@ const VirtualShowCase = () => {
       <NavBar />
       <PageContainer>
         <LandingSlide>
-          <Header>Virtual Showcase</Header>
+          <Header>Virtual Showcase 2022</Header>
         </LandingSlide>
         <Section>
-          <P>
-            The Canadian Hyperloop Conference Virtual Showcase took place over November 27-28!
-          </P>
-          <ul>
-            <li><P>155 attendees in total</P></li>
-            <li><P>11 design teams were represented</P></li>
-            <li><P>13 different presentations were given</P></li>
-            <li><P>Hyperloop Industry Representation</P></li>
-          </ul>
-          <div id="categories">
-            <H1>Categories</H1>
-            <RedSubTitle>Propulsion and Levitation Systems</RedSubTitle>
+          <Downloads id="downloads">
+            <a href={Files['virtual-showcase-application-form'][0].src}><Button>Download Application Form</Button></a>
+            <a href={Files['virtual-showcase-package'][0].src}><Button variant="Secondary">Download Application Guide</Button></a>
+          </Downloads>
+          <div id="explanation">
+            <H1>What is the Virtual Showcase</H1>
             <P>
-              Systems responsible for actuating, driving, or moving the Hyperloop pod during runtime are considered to be propulsion and levitation systems. These include but are not limited to:
+            The Virtual Showcase is an online event where student design teams can showcase their
+            research/prototypes/designs for hyperloop pods or hyperloop infrastructure. The event is a
+            great opportunity for hyperloop student design teams to exchange learnings and in turn create a
+            collaborative hyperloop community. The event will consist of brief presentations from every
+            participating team about a chosen subsystem followed by questions from the audience.
             </P>
-            <ul>
-              <li><P>Induction motors</P></li>
-              <li><P>Magnets</P></li>
-              <li><P>Powertrains</P></li>
-            </ul>
-
-            <RedSubTitle>Electronics</RedSubTitle>
-            <P>
-              The electronics category refers to any printed circuit boards (PCBs) that have been designed in-house. Examples of electronic systems include but are not limited to:
-            </P>
-              <ul>
-                <li><P>Battery management system boards</P></li>
-                <li><P>Boards used for internal and/or external communication</P></li>
-                <li><P>Electronic speed controllers (motor controllers)</P></li>
-                <li><P>Power distribution boards and voltage converters</P></li>
-              </ul>
-
-            <RedSubTitle>Aeroshell</RedSubTitle>
-            <P>
-            The aeroshell refers to the external casing for the Hyperloop pod. This may also include antennae that are mounted to the aeroshell.
-            </P>
-
-            <RedSubTitle>Mechanical &#38; Structures </RedSubTitle>
-            <P>
-              The mechanical and structures category refers to any physical systems on the Hyperloop pod that do not qualify for any of the above categories. These may include but are not limited to:
-            </P>
-              <ul>
-                <li><P>Battery packs</P></li>
-                <li><P>Braking systems</P></li>
-                <li><P>Cooling systems</P></li>
-                <li><P>Enclosures</P></li>
-                <li><P>Frames and chassis</P></li>
-                <li><P>Guidance and suspension systems</P></li>
-              </ul>
-
-            <RedSubTitle>Other</RedSubTitle>
-            <P>
-              The other category is for projects that do not qualify for any of the above categories. This may include projects outside the Hyperloop pod as well. Some projects we'd be interested in but are not limited to include:
-            </P>
-              <ul>
-                <li><P>Constructing a track for Hyperloop pods</P></li>
-                <li><P>Exceptional software or controls projects</P></li>
-                <li><P>Testing systems for Hyperloop pods or subsystems</P></li>
-                <li><P>Unique transportation mechanisms for Hyperloop pods </P></li>
-              </ul>
           </div>
-          <div id="Teams" aria-label="Teams and Presentations">
-            <H1>Teams &amp; Presentations</H1>
-            <Carousel
-              Component={VirtualShowcaseTeamCard}
-              items={VirtualShowcaseTeams}
-            />
+          <div id="enrollment">
+            <H1>How to enroll in the Virtual Showcase</H1>
+            <P>
+            The participating team will have to submit the <a>Virtual Showcase Application Document</a> to this <a>google form</a>
+            by <strong>Nov 1, 2022</strong>. This document will contain details of the system(s) that the team
+            wishes to present at the virtual showcase event. Once submitted the document will be reviewed
+            by the CHC technical team, and the participating team will be informed of the systems selected
+            for presentation by <strong>Nov 3, 2022</strong>. There are a total of 14 categories from which teams can apply
+            for any 4. All categories are mentioned below.
+            </P>
+            <P>
+                Once the team is informed of the category or categories they have been selected to present in,
+                they will be instructed to prepare a presentation. This presentation will be submitted back to the
+                CHC technical team for a final review on <strong>Nov 13, 2022</strong>. Once the final review is complete teams
+                will receive email confirmation from the CHC technical team.
+            </P>
+          </div>
+          <div id="important-dates">
+            <H1>Important Dates</H1>
+            <P>
+            The participating team will have to submit the <a>Virtual Showcase Application Document</a> to this <a>google form</a>
+            by <strong>Nov 1, 2022</strong>. This document will contain details of the system(s) that the team
+            wishes to present at the virtual showcase event. Once submitted the document will be reviewed
+            by the CHC technical team, and the participating team will be informed of the systems selected
+            for presentation by <strong>Nov 3, 2022</strong>. There are a total of 14 categories from which teams can apply
+            for any 4. All categories are mentioned below.
+            </P>
+            <P>
+                Once the team is informed of the category or categories they have been selected to present in,
+                they will be instructed to prepare a presentation. This presentation will be submitted back to the
+                CHC technical team for a final review on <strong>Nov 13, 2022</strong>. Once the final review is complete teams
+                will receive email confirmation from the CHC technical team.
+            </P>
           </div>
           <BackToTop className={showScrollToTop} onClick={goToTop}>
             <KeyboardArrowUpIcon/>
