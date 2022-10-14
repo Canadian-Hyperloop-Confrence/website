@@ -13,6 +13,7 @@ import VirtualShowcaseTeams from '../../data/VirtualShowcaseTeams';
 import VirtualShowcaseTeamCard from '../../components/VirtualShowcaseTeamCard';
 import Button from '../../components/Button';
 import Files from '../../data/files';
+import ListContainer from '../../components/ListContainer';
 
 const Header = styled(Typography).attrs({
   variant: 'header'
@@ -72,6 +73,17 @@ const Downloads = styled.div`
   }
 `;
 
+const ListItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`;
+
+const ImportantDates = styled.div`
+  width: 100%;
+`;
+
 const VirtualShowCase = () => {
   const [showScrollToTop, setShowScrollToTop] = useState<'hide' | 'show'>('hide');
 
@@ -126,12 +138,7 @@ const VirtualShowCase = () => {
           <div id="enrollment">
             <H1>How to enroll in the Virtual Showcase</H1>
             <P>
-            The participating team will have to submit the <a>Virtual Showcase Application Document</a> to this <a>google form</a>
-            by <strong>Nov 1, 2022</strong>. This document will contain details of the system(s) that the team
-            wishes to present at the virtual showcase event. Once submitted the document will be reviewed
-            by the CHC technical team, and the participating team will be informed of the systems selected
-            for presentation by <strong>Nov 3, 2022</strong>. There are a total of 14 categories from which teams can apply
-            for any 4. All categories are mentioned below.
+            The participating team will have to submit the <a download href={Files['virtual-showcase-application-form'][0].src}>Virtual Showcase Application Document</a> to this <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3tuv6sMP7AG8fdGzgGdoBEj_H1MuMkEKEn6dwH4pkO561dA/viewform">google form</a> by <strong>Nov 1, 2022</strong>. This document will contain details of the system(s) that the team wishes to present at the virtual showcase event. Once submitted the document will be reviewed by the CHC technical team, and the participating team will be informed of the systems selected for presentation by <strong>Nov 3, 2022</strong>. There are a total of 14 categories from which teams can apply for any 4. All categories are mentioned below.
             </P>
             <P>
                 Once the team is informed of the category or categories they have been selected to present in,
@@ -140,23 +147,27 @@ const VirtualShowCase = () => {
                 will receive email confirmation from the CHC technical team.
             </P>
           </div>
-          <div id="important-dates">
+          <ImportantDates id="important-dates">
             <H1>Important Dates</H1>
-            <P>
-            The participating team will have to submit the <a>Virtual Showcase Application Document</a> to this <a>google form</a>
-            by <strong>Nov 1, 2022</strong>. This document will contain details of the system(s) that the team
-            wishes to present at the virtual showcase event. Once submitted the document will be reviewed
-            by the CHC technical team, and the participating team will be informed of the systems selected
-            for presentation by <strong>Nov 3, 2022</strong>. There are a total of 14 categories from which teams can apply
-            for any 4. All categories are mentioned below.
-            </P>
-            <P>
-                Once the team is informed of the category or categories they have been selected to present in,
-                they will be instructed to prepare a presentation. This presentation will be submitted back to the
-                CHC technical team for a final review on <strong>Nov 13, 2022</strong>. Once the final review is complete teams
-                will receive email confirmation from the CHC technical team.
-            </P>
-          </div>
+            <ListContainer>
+              <ListItem>
+                <P>Application opens</P>
+                <P>1 Oct. 2022</P>
+              </ListItem>
+              <ListItem>
+                <P>Application deadline</P>
+                <P>1 Nov. 2022</P>
+              </ListItem>
+              <ListItem>
+                <P>Final presentation submission deadline</P>
+                <P>13 Nov. 2022</P>
+              </ListItem>
+              <ListItem>
+                <P>Virtual Showcase Event</P>
+                <P>19-20 Nov. 2022</P>
+              </ListItem>
+            </ListContainer>
+          </ImportantDates>
           <BackToTop className={showScrollToTop} onClick={goToTop}>
             <KeyboardArrowUpIcon/>
           </BackToTop>
