@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 import Head from "next/head";
-import Footer from "../../components/Footer";
-import { LandingSlide, PageContainer, Section as USection } from "../../components/layout";
-import NavBar from "../../components/NavBar";
-import Typography from "../../components/Typography";
-import JumpTo from '../../components/JumpTo';
+import { LandingSlide, PageContainer, Section as USection } from "../../layout";
+import NavBar from "../../NavBar";
+import Typography from "../../Typography";
+import JumpTo from '../JumpTo';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useCallback, useState } from 'react';
 import { useEffect } from 'react';
-import Carousel from '../../components/Carousel';
-import VirtualShowcaseTeams from '../../data/VirtualShowcaseTeams';
-import VirtualShowcaseTeamCard from '../../components/VirtualShowcaseTeamCard';
-import Button from '../../components/Button';
-import Files from '../../data/files';
-import ListContainer from '../../components/ListContainer';
+import Carousel from '../Carousel';
+import VirtualShowcaseTeams from '../../../data/VirtualShowcaseTeams';
+import VirtualShowcaseTeamCard from '../../VirtualShowcaseTeamCard';
+import Button from '../../Button';
+import Files from '../../../data/files';
+import ListContainer from '../../ListContainer';
 
 const Header = styled(Typography).attrs({
   variant: 'header'

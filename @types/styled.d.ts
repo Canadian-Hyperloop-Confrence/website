@@ -1,17 +1,12 @@
 import 'styled-components';
 
-interface ITypeface {
-  regular: string;
-  semiBold: string;
-}
-
 declare module 'styled-components' {
   export interface DefaultTheme {
     palette: {
-      chcRed: string,
-      chcWhite: string,
-      chcBlackA: string,
-      chcBlackB: string,
+      redA: string,
+      whiteA: string,
+      charcoalA: string,
+      charcoalB: string,
       blueA: string,
       greys: Record<1 | 2 | 3 | 4 | 5, string>;
     },
@@ -19,12 +14,13 @@ declare module 'styled-components' {
       desktop: string;
     },
     typography: {
-      hero: ITypeface;
-      header: ITypeface;
-      title: ITypeface;
-      body: ITypeface;
-      nav: ITypeface;
-      faq: ITypeface
+      title: string;
+      subTitle: string;
+      heading: string;
+      subHeading: string;
+      button: string;
+      body: string;
+      caption: string;
     };
     constants: Record<string, string>;
   }

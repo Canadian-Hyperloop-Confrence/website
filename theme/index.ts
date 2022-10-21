@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-const theme: DefaultTheme = {
+export const themeOld = {
   palette: {
     chcRed: '#FF0000',
     chcWhite: '#FAFAFA',
@@ -49,5 +49,34 @@ const theme: DefaultTheme = {
     footerHeight: '56px',
   }
 };
+
+const theme: DefaultTheme = {
+  breakPoints: {
+    desktop: '1024px',
+  },
+  palette: {
+    redA: "#FF0000",
+    whiteA: "#FAFAFA",
+    charcoalA: "#2A3339",
+    charcoalB: "#36454F",
+    blueA: "#54879D",
+    greys: {
+      1: '#4F4F4F',
+      2: '#828282',
+      3: '#BDBDBD',
+      4: '#E0E0E0',
+      5: '#F2F2F2',
+    },
+  },
+  typography: {
+    title: '700 44px/46px Inter',
+    subTitle: '700 35px/39px Inter',
+    heading: '600 28px/34px "Plus Jakarta Sans"',
+    subHeading: '600 20px/24px "Plus Jakarta Sans"',
+    button: '500 20px/26px "Plus Jakarta Sans"',
+    body: '500 20px/40px "Plus Jakarta Sans"',
+    caption: '400 14px/16px "Plus Jakarta Sans"'
+  },
+}
 
 export default theme;

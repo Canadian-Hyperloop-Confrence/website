@@ -1,34 +1,39 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-const Header = styled.h1`
-  font: ${({ theme }): string => theme.typography.header.semiBold};
+const Heading = styled.h3`
+  font: ${({ theme }): string => theme.typography.heading};
 `;
+
+const SubHeading = styled.h4`
+  font: ${({ theme }): string => theme.typography.subHeading};
+`;
+
 
 const Title = styled.h1`
-  font: ${({ theme }): string => theme.typography.title.semiBold};
+  font: ${({ theme }): string => theme.typography.title};
 `;
 
-const SubTitle = styled.h1`
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 26px;
-  letter-spacing: 0.06em;
-  text-align: justified;
+const SubTitle = styled.h2`
+  font: ${({ theme }): string => theme.typography.subTitle};
 `;
 
 const Body = styled.p`
-  font: ${({ theme }): string => theme.typography.body.regular};
+  font: ${({ theme }): string => theme.typography.body};
 `;
 
-const Hero = styled.p`
-  font: ${({ theme }): string => theme.typography.hero.semiBold};
+
+const Caption = styled.p`
+  font: ${({ theme }): string => theme.typography.caption};
 `;
+
+const Button = styled.p`
+  font: ${({ theme }): string => theme.typography.button};
+`;
+
 
 interface Props {
-  variant: 'body' | 'header' | 'title' | 'subtitle' | 'hero';
+  variant: 'body' | 'heading' | 'title' | 'subTitle' | 'subHeading' | 'button' | 'caption';
   children: ReactNode;
   className?: string;
   color?: 'red' | 'black';
@@ -36,11 +41,13 @@ interface Props {
 
 const Typography: React.FC<Props> = ({ variant, children, className, color='black' }) => {
   switch (variant) {
-    case 'body':      return <Body className={`typography-${color} ${className} typography`}>{children}</Body>;
     case 'title':     return <Title className={`typography-${color} ${className} typography`}>{children}</Title>;
-    case 'header':    return <Header className={`typography-${color} ${className} typography`}>{children}</Header>;
-    case 'subtitle':  return <SubTitle className={`typography-${color} ${className} typography`}>{children}</SubTitle>;
-    case 'hero':  return <Hero className={`typography-${color} ${className} typography`}>{children}</Hero>;
+    case 'subTitle':     return <SubTitle className={`typography-${color} ${className} typography`}>{children}</SubTitle>;
+    case 'heading':    return <Heading className={`typography-${color} ${className} typography`}>{children}</Heading>;
+    case 'subHeading':    return <SubHeading className={`typography-${color} ${className} typography`}>{children}</SubHeading>;
+    case 'body':      return <Body className={`typography-${color} ${className} typography`}>{children}</Body>;
+    case 'caption':  return <Caption className={`typography-${color} ${className} typography`}>{children}</Caption>;
+    case 'button':  return <Button className={`typography-${color} ${className} typography`}>{children}</Button>;
   }
 }
 
