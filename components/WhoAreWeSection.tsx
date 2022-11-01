@@ -64,7 +64,7 @@ const ButtonContainer = styled.div`
   cursor: pointer;
   h1 {
     color: ${({ theme }): string => theme.palette.charcoalA};
-    font: ${({ theme }): string => theme.typography.faq.semiBold};
+    font: ${({ theme }): string => /*theme.typography.faq.semiBold*/''};
   }
 `;
 const Button = ({onClick, children}: { onClick: () => void, children: React.ReactNode }) => (
