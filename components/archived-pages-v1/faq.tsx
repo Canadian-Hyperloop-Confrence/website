@@ -27,7 +27,7 @@ const Header = styled(Typography).attrs({
 const RedTitle = styled.h1`
   margin: 0;
   padding: 0;
-  color: ${({ theme }): string => theme.palette.chcRed};
+  color: ${({ theme }): string => theme.palette.redA};
   font: ${({ theme }): string => theme.typography.faq.semiBold};
 `;
 

@@ -9,10 +9,10 @@ const LinkContainer = styled.div`
 `;
 
 const LinkText = styled.p`
-  color: ${({ theme }): string => theme.palette.chcWhite};
+  color: ${({ theme }): string => theme.palette.whiteA};
   margin-left: 30px;
   cursor: pointer;
-  font: ${({ theme }): string => theme.typography.nav.regular};
+  font: ${({ theme }): string => /* theme.typography.nav.regular*/''};
   align-self: center;
 `;
 
@@ -22,7 +22,7 @@ const Container = styled.div`
   padding-right: 30px;
   height: ${({ theme }): string => theme.constants.footerHeight};
 
-  background-color: ${({ theme }): string => theme.palette.chcBlackA};
+  background-color: ${({ theme }): string => theme.palette.charcoalA};
 
   display: flex;
   justify-content: space-between;

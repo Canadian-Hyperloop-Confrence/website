@@ -45,7 +45,7 @@ const BackToTop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.palette.chcWhite};
+  color: ${({ theme }) => theme.palette.whiteA};
 
   cursor: pointer;
 

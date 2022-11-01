@@ -106,7 +106,7 @@ const SubTitle = styled(Typography).attrs({
 const StyledLink = styled.a`
   font-weight: bold;
   text-decoration: none;
-  color: ${({ theme }) => theme.palette.chcBlackA};
+  color: ${({ theme }) => theme.palette.charcoalA};
 
   &:hover {
     text-decoration: underline;
@@ -189,11 +189,11 @@ const JurorImageFrame = styled.div`
 
 const WorkshopBody = styled(Body)`
   padding: 16px;
-  color:${({ theme }) => theme.palette.chcWhite } !important;
+  color:${({ theme }) => theme.palette.whiteA } !important;
   background-color: ${({ theme }) => theme.palette.chcBlackB};
 
   strong {
-    color: ${({ theme }) => theme.palette.chcRed };
+    color: ${({ theme }) => theme.palette.redA };
   }
 `;
 

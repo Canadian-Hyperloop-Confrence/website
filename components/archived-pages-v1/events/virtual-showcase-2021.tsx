@@ -32,7 +32,7 @@ const H1 = styled(Typography).attrs({
 })``;
 
 const RedSubTitle = styled.h3`
-  color: ${({ theme }): string => theme.palette.chcRed};
+  color: ${({ theme }): string => theme.palette.redA};
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
@@ -45,7 +45,7 @@ const RedSubTitle = styled.h3`
 `;
 
 const ApplicationProcessList = styled.ol`
-  color: ${({ theme }): string => theme.palette.chcRed};
+  color: ${({ theme }): string => theme.palette.redA};
 
   font-family: Montserrat;
   font-size: 20px;
@@ -56,7 +56,7 @@ const ApplicationProcessList = styled.ol`
   text-align: justified;
 
   ol {
-    color: ${({ theme }): string => theme.palette.chcBlackA};
+    color: ${({ theme }): string => theme.palette.charcoalA};
     font-family: Questrial;
     font-size: 20px;
     font-style: normal;
@@ -67,7 +67,7 @@ const ApplicationProcessList = styled.ol`
   }
 
   ul {
-    color: ${({ theme }): string => theme.palette.chcBlackA};
+    color: ${({ theme }): string => theme.palette.charcoalA};
     list-style-type: disc;
   }
 `;
@@ -84,7 +84,7 @@ const BackToTop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.palette.chcWhite};
+  color: ${({ theme }) => theme.palette.whiteA};
 
   cursor: pointer;
 

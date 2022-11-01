@@ -34,7 +34,7 @@ const Button = styled.p`
 
 interface Props {
   variant: 'body' | 'heading' | 'title' | 'subTitle' | 'subHeading' | 'button' | 'caption';
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   color?: 'red' | 'black';
 }

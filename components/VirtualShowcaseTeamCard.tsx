@@ -18,7 +18,7 @@ const Container = styled(Paper)`
   flex-direction: column;
   display: flex;
   padding-left: 8px;
-  background-color: ${({ theme }): string => theme.palette.chcWhite}
+  background-color: ${({ theme }): string => theme.palette.whiteA}
 `;
 
 const TeamLogo = styled.img`
@@ -36,7 +36,7 @@ const TeamLogoContainer = styled.div`
 `;
 
 const SectionHeader = styled(Typography).attrs({
-  variant: 'subtitle',
+  variant: 'subTitle',
   color: 'red'
 })``;
 

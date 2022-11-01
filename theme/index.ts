@@ -2,9 +2,9 @@ import { DefaultTheme } from 'styled-components';
 
 export const themeOld = {
   palette: {
-    chcRed: '#FF0000',
-    chcWhite: '#FAFAFA',
-    chcBlackA: '#2A3339',
+    redA: '#FF0000',
+    whiteA: '#FAFAFA',
+    charcoalA: '#2A3339',
     chcBlackB: '#36454F',
     blueA: '#54879D',
     greys: {
