@@ -168,6 +168,19 @@ const VirtualShowCase = () => {
               </ListItem>
             </ListContainer>
           </ImportantDates>
+          <ImportantDates id="sign-up">
+          <H1>Sign Up to attend the Event</H1>
+          <ListContainer>
+            <ListItem>
+              <P><a href="/events/virtual-showcase-day1" style={{ color: 'black'}}><strong>Virtual Showcase Event Day 1</strong></a></P>
+              <P>19 Nov. 2022</P>
+            </ListItem>
+            <ListItem>
+              <P><a href="/events/virtual-showcase-day2" style={{ color: 'black'}}><strong>Virtual Showcase Event Day 2</strong></a></P>
+              <P>20 Nov. 2022</P>
+            </ListItem>
+          </ListContainer>
+          </ImportantDates>
           <BackToTop className={showScrollToTop} onClick={goToTop}>
             <KeyboardArrowUpIcon/>
           </BackToTop>
