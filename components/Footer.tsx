@@ -12,7 +12,7 @@ const LinkText = styled.p`
   color: ${({ theme }): string => theme.palette.whiteA};
   margin-left: 30px;
   cursor: pointer;
-  font: ${({ theme }): string => theme.typography.nav};
+  font: ${({ theme }): string => /* theme.typography.nav.regular*/''};
   align-self: center;
 `;
 

@@ -54,6 +54,10 @@ const theme: DefaultTheme = {
   breakPoints: {
     desktop: '1024px',
   },
+  constants: {
+    navbarHeight: '56px',
+    footerHeight: '56px',
+  },
   palette: {
     redA: "#FF0000",
     whiteA: "#FAFAFA",

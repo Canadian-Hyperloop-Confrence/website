@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.div`
-  font: ${({ theme }) => theme.typography.heading1};
+  font: ${({ theme }) => /*theme.typography.body.semiBold*/''};
   color: ${({ theme }) => theme.palette.charcoalA};
 `;
 

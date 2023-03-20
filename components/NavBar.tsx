@@ -18,7 +18,7 @@ const LinkTextV1 = styled.p<{selected: boolean}>`
     border-bottom: 2px solid ${({ theme }): string => theme.palette.redA};
   ` : css``}
   cursor: pointer;
-  font: ${({ theme }): string => theme.typography.nav};
+  font: ${({ theme }): string => /*theme.typography.nav.regular*/''};
   align-self: flex-start;
 `;
 
@@ -29,7 +29,7 @@ const LinkTextV2 = styled.p<{selected: boolean}>`
     border-bottom: 2px solid ${({ theme }): string => theme.palette.redA};
   ` : css``}
   cursor: pointer;
-  font: ${({ theme }): string => theme.typography.nav};
+  font: ${({ theme }): string => /*theme.typography.nav.regular*/''};
   align-self: flex-start;
 `;
 
