@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 import Head from "next/head";
-import Footer from "../../components/Footer";
-import { LandingSlide, PageContainer, Section as USection } from "../../components/layout";
-import NavBar from "../../components/NavBar";
-import Typography from "../../components/Typography";
-import JumpTo from '../../components/JumpTo';
+import Footer from "../../Footer";
+import { LandingSlide, PageContainer, Section as USection } from "../../layout";
+import NavBar from "../../NavBar";
+import Typography from "../../Typography";
+import JumpTo from '../../JumpTo';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useCallback, useState } from 'react';
 import { useEffect } from 'react';
-import Carousel from '../../components/Carousel';
-import VirtualShowcaseTeams from '../../data/VirtualShowcaseTeams';
-import VirtualShowcaseTeamCard from '../../components/VirtualShowcaseTeamCard';
+import Carousel from '../../Carousel';
+import VirtualShowcaseTeams from '../../../data/VirtualShowcaseTeams';
+import VirtualShowcaseTeamCard from '../../VirtualShowcaseTeamCard';
 
 const Header = styled(Typography).attrs({
-  variant: 'header'
+  variant: 'heading1'
 })`
   width: 100%;
   text-align: center;
@@ -32,7 +32,7 @@ const H1 = styled(Typography).attrs({
 })``;
 
 const RedSubTitle = styled.h3`
-  color: ${({ theme }): string => theme.palette.chcRed};
+  color: ${({ theme }): string => theme.palette.redA};
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
@@ -45,7 +45,7 @@ const RedSubTitle = styled.h3`
 `;
 
 const ApplicationProcessList = styled.ol`
-  color: ${({ theme }): string => theme.palette.chcRed};
+  color: ${({ theme }): string => theme.palette.redA};
 
   font-family: Montserrat;
   font-size: 20px;
@@ -56,7 +56,7 @@ const ApplicationProcessList = styled.ol`
   text-align: justified;
 
   ol {
-    color: ${({ theme }): string => theme.palette.chcBlackA};
+    color: ${({ theme }): string => theme.palette.charcoalA};
     font-family: Questrial;
     font-size: 20px;
     font-style: normal;
@@ -67,7 +67,7 @@ const ApplicationProcessList = styled.ol`
   }
 
   ul {
-    color: ${({ theme }): string => theme.palette.chcBlackA};
+    color: ${({ theme }): string => theme.palette.charcoalA};
     list-style-type: disc;
   }
 `;
@@ -80,11 +80,11 @@ const BackToTop = styled.div`
 
   position: fixed;
 
-  background-color: ${({ theme }) => theme.palette.chcBlackB};
+  background-color: ${({ theme }) => theme.palette.charcoalB};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.palette.chcWhite};
+  color: ${({ theme }) => theme.palette.whiteA};
 
   cursor: pointer;
 

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import Head from "next/head";
-import Footer from "../components/Footer";
-import { LandingSlide, PageContainer, Section as USection } from "../components/layout";
-import NavBar from "../components/NavBar";
-import Typography from "../components/Typography";
-import Button from '../components/Button';
-import PartnersData from '../data/Partners';
-import Sponsors from '../data/Sponsors';
+import Footer from "../Footer";
+import { LandingSlide, PageContainer, Section as USection } from "../layout";
+import NavBar from "../NavBar";
+import Typography from "../Typography";
+import Button from '../Button';
+import PartnersData from '../../data/Partners';
+import Sponsors from '../../data/Sponsors';
 
 const Header = styled(Typography).attrs({
-  variant: 'header'
+  variant: 'heading1'
 })`
   width: 100%;
   text-align: center;

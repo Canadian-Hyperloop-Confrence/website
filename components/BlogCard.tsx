@@ -24,7 +24,7 @@ const TextContainer = styled.div`
 `;
 
 const Card = styled.div<{invertBorder: boolean }>`
-  border: 3px solid ${({ theme, invertBorder }): string => invertBorder ? theme.palette.chcWhite : theme.palette.chcBlackA };
+  border: 3px solid ${({ theme, invertBorder }): string => invertBorder ? theme.palette.whiteA : theme.palette.charcoalA };
   border-radius: 10px;
   max-width: 743px;
   display: flex;

@@ -9,6 +9,31 @@ declare module 'styled-components' {
       charcoalB: string,
       blueA: string,
       greys: Record<1 | 2 | 3 | 4 | 5, string>;
+      text: {
+        primary: string,
+        secondary: string,
+        subdued: string,
+        onDark: string,
+      },
+      background: {
+        default: string;
+        dark: string;
+        sectionBreak: string;
+      },
+      interactive: {
+        default: string,
+        hovered: string,
+        pressed: string,
+        disabled: string,
+      },
+      navigation: {
+        default: string,
+        hovered: string,
+        divider: {
+          label: string,
+          line: string,
+        }
+      }
     },
     breakPoints: {
       desktop: string;
@@ -16,11 +41,15 @@ declare module 'styled-components' {
     typography: {
       title: string;
       subTitle: string;
-      heading: string;
-      subHeading: string;
+      heading1: string;
+      heading2: string;
+      heading3: string;
+      p1: string;
+      p2: string;
       button: string;
       body: string;
       caption: string;
+      nav: string;
     };
     constants: Record<string, string>;
   }

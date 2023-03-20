@@ -2,11 +2,11 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.h3`
-  font: ${({ theme }): string => theme.typography.heading};
+  font: ${({ theme }): string => theme.typography.heading1};
 `;
 
 const SubHeading = styled.h4`
-  font: ${({ theme }): string => theme.typography.subHeading};
+  font: ${({ theme }): string => theme.typography.heading2};
 `;
 
 
@@ -33,7 +33,7 @@ const Button = styled.p`
 
 
 interface Props {
-  variant: 'body' | 'heading' | 'title' | 'subTitle' | 'subHeading' | 'button' | 'caption';
+  variant: 'body' | 'heading1' | 'title' | 'subTitle' | 'heading2' | 'button' | 'caption';
   children: ReactNode;
   className?: string;
   color?: 'red' | 'black';
@@ -43,8 +43,8 @@ const Typography: React.FC<Props> = ({ variant, children, className, color='blac
   switch (variant) {
     case 'title':     return <Title className={`typography-${color} ${className} typography`}>{children}</Title>;
     case 'subTitle':     return <SubTitle className={`typography-${color} ${className} typography`}>{children}</SubTitle>;
-    case 'heading':    return <Heading className={`typography-${color} ${className} typography`}>{children}</Heading>;
-    case 'subHeading':    return <SubHeading className={`typography-${color} ${className} typography`}>{children}</SubHeading>;
+    case 'heading1':    return <Heading className={`typography-${color} ${className} typography`}>{children}</Heading>;
+    case 'heading2':    return <SubHeading className={`typography-${color} ${className} typography`}>{children}</SubHeading>;
     case 'body':      return <Body className={`typography-${color} ${className} typography`}>{children}</Body>;
     case 'caption':  return <Caption className={`typography-${color} ${className} typography`}>{children}</Caption>;
     case 'button':  return <Button className={`typography-${color} ${className} typography`}>{children}</Button>;

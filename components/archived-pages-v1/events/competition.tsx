@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import styled, { useTheme } from 'styled-components';
 import React from 'react'
-import { LandingSlide, PageContainer as UPageContainer, Section as USection } from "../../components/layout";
-import NavBar from '../../components/NavBar';
-import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import { LandingSlide, PageContainer as UPageContainer, Section as USection } from "../../layout";
+import NavBar from '../../NavBar';
+import Typography from '../../Typography';
+import Button from '../../Button';
 import Link from 'next/link';
 
 const PageContainer = styled(UPageContainer)`
@@ -69,7 +69,7 @@ const DashCell = styled.td`
 `;
 
 const Header = styled(Typography).attrs({
-  variant: 'header'
+  variant: 'heading1'
 })`
   width: 100%;
   text-align: center;
@@ -100,13 +100,13 @@ const Section = styled(USection)``;
 
 const SubTitle = styled(Typography).attrs({
   color: 'red',
-  variant: 'subtitle'
+  variant: 'heading2'
 })``;
 
 const StyledLink = styled.a`
   font-weight: bold;
   text-decoration: none;
-  color: ${({ theme }) => theme.palette.chcBlackA};
+  color: ${({ theme }) => theme.palette.charcoalA};
 
   &:hover {
     text-decoration: underline;
@@ -189,11 +189,11 @@ const JurorImageFrame = styled.div`
 
 const WorkshopBody = styled(Body)`
   padding: 16px;
-  color:${({ theme }) => theme.palette.chcWhite } !important;
-  background-color: ${({ theme }) => theme.palette.chcBlackB};
+  color:${({ theme }) => theme.palette.whiteA } !important;
+  background-color: ${({ theme }) => theme.palette.charcoalB};
 
   strong {
-    color: ${({ theme }) => theme.palette.chcRed };
+    color: ${({ theme }) => theme.palette.redA };
   }
 `;
 

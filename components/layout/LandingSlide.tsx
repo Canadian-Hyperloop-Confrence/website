@@ -7,18 +7,18 @@ const OuterV1 = styled.div`
   height: 280px;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }):string => theme.palette.chcBlackA};
+  background-color: ${({ theme }):string => theme.palette.charcoalA};
 `;
 
 const OuterV2 = styled(OuterV1)`
   height: 95vh;
-  background-color: ${({ theme }):string => theme.palette.chcWhite};
+  background-color: ${({ theme }):string => theme.palette.whiteA};
 `;
 
 const LandingSlideV1 = styled.div`
   width: 865px;
   .typography {
-    color: ${({ theme }): string => theme.palette.chcWhite};
+    color: ${({ theme }): string => theme.palette.whiteA};
     margin: 0;
   }
   @media screen and (max-width: ${({ theme }): string => theme.breakPoints.desktop}) {
@@ -32,7 +32,7 @@ const LandingSlideV2 = styled(LandingSlideV1)`
   width: 100%;
   .typography {
     text-align: center;
-    color: ${({ theme }): string => theme.palette.chcBlackA};
+    color: ${({ theme }): string => theme.palette.charcoalA};
   }
 `;
 
@@ -43,7 +43,7 @@ interface Props {
 }
 
 const LandingSlideComponent = ({className, children, version=1 }: Props) => {
-  const [Outer, LandingSlide] = useMemo(() => { 
+  const [Outer, LandingSlide] = useMemo(() => {
     switch(version) {
       case 1:
         return [OuterV1, LandingSlideV1];

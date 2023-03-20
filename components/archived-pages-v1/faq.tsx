@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import Head from "next/head";
-import Footer from "../components/Footer";
-import { LandingSlide, PageContainer as UPageContainer, Section as USection } from "../components/layout";
-import NavBar from "../components/NavBar";
-import Typography from "../components/Typography";
+import Footer from "../Footer";
+import { LandingSlide, PageContainer as UPageContainer, Section as USection } from "../layout";
+import NavBar from "../NavBar";
+import Typography from "../Typography";
 
 const PageContainer = styled(UPageContainer)`
   ul {
@@ -18,7 +18,7 @@ const PageContainer = styled(UPageContainer)`
 `;
 
 const Header = styled(Typography).attrs({
-  variant: 'header'
+  variant: 'heading1'
 })`
   width: 100%;
   text-align: center;
@@ -27,8 +27,7 @@ const Header = styled(Typography).attrs({
 const RedTitle = styled.h1`
   margin: 0;
   padding: 0;
-  color: ${({ theme }): string => theme.palette.chcRed};
-  font: ${({ theme }): string => theme.typography.faq.semiBold};
+  color: ${({ theme }): string => theme.palette.redA};
 `;
 
 

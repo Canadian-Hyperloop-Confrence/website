@@ -12,24 +12,24 @@ const LinkContainer = styled.div`
 `;
 
 const LinkTextV1 = styled.p<{selected: boolean}>`
-  color: ${({ theme }): string => theme.palette.chcWhite};
+  color: ${({ theme }): string => theme.palette.whiteA};
   margin-left: 30px;
   ${({ selected }): FlattenInterpolation<ThemeProps<DefaultTheme>> => selected ? css`
-    border-bottom: 2px solid ${({ theme }): string => theme.palette.chcRed};
+    border-bottom: 2px solid ${({ theme }): string => theme.palette.redA};
   ` : css``}
   cursor: pointer;
-  font: ${({ theme }): string => theme.typography.nav.regular};
+  font: ${({ theme }): string => theme.typography.nav};
   align-self: flex-start;
 `;
 
 const LinkTextV2 = styled.p<{selected: boolean}>`
-  color: ${({ theme }): string => theme.palette.chcBlackA};
+  color: ${({ theme }): string => theme.palette.charcoalA};
   margin-left: 30px;
   ${({ selected }): FlattenInterpolation<ThemeProps<DefaultTheme>> => selected ? css`
-    border-bottom: 2px solid ${({ theme }): string => theme.palette.chcRed};
+    border-bottom: 2px solid ${({ theme }): string => theme.palette.redA};
   ` : css``}
   cursor: pointer;
-  font: ${({ theme }): string => theme.typography.nav.regular};
+  font: ${({ theme }): string => theme.typography.nav};
   align-self: flex-start;
 `;
 
@@ -38,7 +38,7 @@ const ContainerV1 = styled.div`
   min-height: ${({ theme }): string => theme.constants.navbarHeight};
   height: fit-content;
 
-  background-color: ${({ theme }): string => theme.palette.chcBlackA};
+  background-color: ${({ theme }): string => theme.palette.charcoalA};
 
   display: flex;
   justify-content: space-between;
@@ -53,7 +53,7 @@ const ContainerV1 = styled.div`
 `;
 
 const ContainerV2 = styled(ContainerV1)`
-  background-color: ${({ theme }): string => theme.palette.chcWhite};
+  background-color: ${({ theme }): string => theme.palette.whiteA};
 `;
 
 const MobileNavMenuContainer = styled.div<{ open: boolean}>`
@@ -80,19 +80,19 @@ const MobileNavMenuV1 = styled.div`
   padding-right: 10px;
   padding-top: 10vh;
 
-  background-color: ${({ theme }): string => theme.palette.chcBlackA};
+  background-color: ${({ theme }): string => theme.palette.charcoalA};
   opacity: 100%;
   ${LinkTextV1} {
-    color: ${({ theme }):string => theme.palette.chcWhite};
+    color: ${({ theme }):string => theme.palette.whiteA};
     text-align: end;
   }
   z-index: 20;
 `;
 
 const MobileNavMenuV2 = styled(MobileNavMenuV1)`
-  background-color: ${({ theme }): string => theme.palette.chcWhite};
+  background-color: ${({ theme }): string => theme.palette.whiteA};
   ${LinkTextV2} {
-    color: ${({ theme }):string => theme.palette.chcBlackA};
+    color: ${({ theme }):string => theme.palette.charcoalA};
   }
 `;
 

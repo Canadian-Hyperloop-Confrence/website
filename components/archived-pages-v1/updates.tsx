@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import Head from "next/head";
-import Footer from "../components/Footer";
-import { LandingSlide, PageContainer, Section } from "../components/layout";
-import NavBar from "../components/NavBar";
-import Typography from "../components/Typography";
-import UBlogCard from '../components/BlogCard';
+import Footer from "../Footer";
+import { LandingSlide, PageContainer, Section } from "../layout";
+import NavBar from "../NavBar";
+import Typography from "../Typography";
+import UBlogCard from '../BlogCard';
 import { GetServerSideProps } from 'next';
 
 const Header = styled(Typography).attrs({
-  variant: 'header'
+  variant: 'heading1'
 })`
   width: 100%;
   text-align: center;

@@ -3,11 +3,11 @@ import Head from "next/head";
 import { LandingSlide, PageContainer, Section as USection } from "../../layout";
 import NavBar from "../../NavBar";
 import Typography from "../../Typography";
-import JumpTo from '../JumpTo';
+import JumpTo from '../../JumpTo';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useCallback, useState } from 'react';
 import { useEffect } from 'react';
-import Carousel from '../Carousel';
+import Carousel from '../../Carousel';
 import VirtualShowcaseTeams from '../../../data/VirtualShowcaseTeams';
 import VirtualShowcaseTeamCard from '../../VirtualShowcaseTeamCard';
 import Button from '../../Button';
@@ -15,7 +15,7 @@ import Files from '../../../data/files';
 import ListContainer from '../../ListContainer';
 
 const Header = styled(Typography).attrs({
-  variant: 'header'
+  variant: 'heading1'
 })`
   width: 100%;
   text-align: center;
@@ -41,11 +41,11 @@ const BackToTop = styled.div`
 
   position: fixed;
 
-  background-color: ${({ theme }) => theme.palette.chcBlackB};
+  background-color: ${({ theme }) => theme.palette.charcoalB};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.palette.chcWhite};
+  color: ${({ theme }) => theme.palette.whiteA};
 
   cursor: pointer;
 

@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import styled, { useTheme } from 'styled-components';
-import Footer from '../components/Footer';
-import { PageContainer, Section as USection, LandingSlide } from '../components/layout';
-import Typography from '../components/Typography';
-import NavBar from '../components/NavBar';
-import useScreenSize from '../hooks/screen-size';
-import WhoAreWeSection from '../components/WhoAreWeSection';
-import useBreakpoint from '../hooks/break-point';
+import Footer from '../Footer';
+import { PageContainer, Section as USection, LandingSlide } from '../layout';
+import Typography from '../Typography';
+import NavBar from '../NavBar';
+import useScreenSize from '../../hooks/screen-size';
+import WhoAreWeSection from '../WhoAreWeSection';
+import useBreakpoint from '../../hooks/break-point';
 
 const Section = styled(USection)`
   min-height: 900px;
@@ -29,13 +29,13 @@ const MobileTemp = () => {
     <NavBar/>
     <PageContainer>
       <LandingSlide>
-        <Typography variant="header">CANADIAN</Typography>
-        <Typography variant="header">HYPERLOOP</Typography>
-        <Typography variant="header">CONFERENCE</Typography>
+        <Typography variant="heading1">CANADIAN</Typography>
+        <Typography variant="heading1">HYPERLOOP</Typography>
+        <Typography variant="heading1">CONFERENCE</Typography>
         <ByLine>Leading innovation in hyperloop technologies</ByLine>
       </LandingSlide>
       <Section>
-        <Typography variant="header">We Are CHC</Typography>
+        <Typography variant="heading1">We Are CHC</Typography>
         <iframe width={`${Math.min(700, screenSize.width - 120)}`} height={`${Math.min(700, screenSize.width - 120) * videoAspectRatio}`} src="https://www.youtube-nocookie.com/embed/gve6qAB0_4M" title="We Are CHC"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <Typography variant="title">Our Vision</Typography>
         <Typography variant="body">Hyperloop has the potential to enable the highest speed passenger transportation while simultaneously achieving the highest per-passenger-km efficiency. Hyperloop technologies promise a sustainable, economical, and reliable mode of transportation, and the goal of the CHC is to enable this future to happen, especially in Canada. We aspire to inspire Hyperloop innovation, realization, and deployment, and thereby **accelerate the sustainable future of transportation.</Typography>
@@ -72,7 +72,7 @@ const HomePage: React.FC = () => {
         <NavBar version={2}/>
         <PageContainer version={2}>
           <LandingSlide version={2}>
-            <Typography variant="hero">CANADIAN HYPERLOOP CONFERENCE</Typography>
+            <Typography variant="title">CANADIAN HYPERLOOP CONFERENCE</Typography>
           </LandingSlide>
           <Section>
             <WhoAreWeSection />

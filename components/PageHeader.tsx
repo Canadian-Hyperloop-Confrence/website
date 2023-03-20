@@ -2,8 +2,8 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.div`
-  font: ${({ theme }) => theme.typography.body.semiBold};
-  color: ${({ theme }) => theme.palette.chcBlackA};
+  font: ${({ theme }) => theme.typography.heading1};
+  color: ${({ theme }) => theme.palette.charcoalA};
 `;
 
 const Container = styled.div`

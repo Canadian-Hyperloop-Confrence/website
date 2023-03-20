@@ -15,7 +15,7 @@ const JumpToText = styled.p`
   line-height: 32px;
   letter-spacing: 0.05em;
   text-align: justified;
-  color: ${({ theme }): string => theme.palette.chcRed};
+  color: ${({ theme }): string => theme.palette.redA};
 `;
 
 const Sections = styled.div`
