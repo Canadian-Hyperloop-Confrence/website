@@ -9,6 +9,11 @@ interface INavPrefix {
   readonly routes: INavLink[];
 }
 
+interface IImage {
+  readonly src: string;
+  readonly altText: string;
+}
+
 interface TeamMemberHeadshot {
   name: string;
   position: string;

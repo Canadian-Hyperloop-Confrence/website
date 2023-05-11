@@ -64,6 +64,7 @@ const theme: DefaultTheme = {
     charcoalA: "#2A3339",
     charcoalB: "#36454F",
     blueA: "#54879D",
+    dividerLine: "#D8D8D8",
     greys: {
       1: '#4F4F4F',
       2: '#828282',
@@ -104,13 +105,12 @@ const theme: DefaultTheme = {
     heading2: '600 40px/48px "Plus Jakarta Sans"',
     heading3: '600 24px/32px "Plus Jakarta Sans"',
     p1: '500 20px/40px "Plus Jakarta Sans"',
-    p2: '500 16px/32px "Plus Jakarta Sans"',
-    button: '500 20px/26px "Plus Jakarta Sans"',
-    body: '900 14px/18px "Plus Jakarta Sans"',
+    p2: '400 16px/32px "Plus Jakarta Sans"',
+    body: '500 20px/26px "Plus Jakarta Sans"',
+    button: '900 14px/18px "Plus Jakarta Sans"',
     caption: '400 14px/16px "Plus Jakarta Sans"',
     nav: '900 14px/18px "Plus Jakarta Sans"',
   },
-  constants: {}
 }
 
 export default theme;

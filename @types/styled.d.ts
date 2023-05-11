@@ -8,6 +8,7 @@ declare module 'styled-components' {
       charcoalA: string,
       charcoalB: string,
       blueA: string,
+      dividerLine: string,
       greys: Record<1 | 2 | 3 | 4 | 5, string>;
       text: {
         primary: string,
