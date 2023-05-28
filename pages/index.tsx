@@ -158,14 +158,14 @@ const LandingPage = () => {
                         description='Compete with teams around the world in various categories.'
                         index={1}
                         links={[
-                            {
-                                href: "",
-                                linkText: "Sign Up"
-                            },
-                            {
-                                href: "",
-                                linkText: "Learn More"
-                            },
+                            // {
+                            //     href: "",
+                            //     linkText: "Sign Up"
+                            // },
+                            // {
+                            //     href: "",
+                            //     linkText: "Learn More"
+                            // },
                         ]}
                         img={"images/2023 Conference Photo.png"} />
                     <UpNextCard
@@ -173,10 +173,10 @@ const LandingPage = () => {
                         description='Join our international showcase, and share designs in front of industry professionals.'
                         index={2}
                         links={[
-                            {
-                                href: "",
-                                linkText: "Learn More"
-                            },
+                            // {
+                            //     href: "",
+                            //     linkText: "Learn More"
+                            // },
                         ]}
                         img={"images/2023 Virtual Showcase Photo.png"} />
                 </UpNextContainer>
