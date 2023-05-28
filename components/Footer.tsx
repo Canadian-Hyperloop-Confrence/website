@@ -37,11 +37,12 @@ const Section = styled.div`
     margin: 0px;
   }
 
-  p {
+  p, a {
     font: ${({ theme }) => theme.typography.caption };
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
+    color: ${({ theme }) => theme.palette.text.onDark};
   }
 `;
 
@@ -96,10 +97,10 @@ const Footer: React.FC = () => (
           </Section>
           <Section>
             <h5>Stay In the loop</h5>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Twitter</p>
-            <p>Youtube</p>
+            <p><a href="https://www.facebook.com/cahyperloop">Facebook</a></p>
+            <p><a href="https://www.instagram.com/cahyperloop/">Instagram</a></p>
+            <p><a href="https://twitter.com/cahyperloop">Twitter</a></p>
+            <p><a href="https://www.youtube.com/channel/UCYC--3qbnPwe1NMiiBiLCQw/featured">Youtube</a></p>
           </Section>
         </Column>
       </SectionWrapper>
