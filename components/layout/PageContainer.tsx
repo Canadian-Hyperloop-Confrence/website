@@ -14,15 +14,15 @@ const PageContainerV1 = styled.div`
   margin-top: ${({ theme }): string => theme.constants.navbarHeight}; /* nav bar height */
 
   .section:nth-child(2n) {
-    background-color: ${({ theme }):string => theme.palette.chcWhite};
+    background-color: ${({ theme }):string => theme.palette.whiteA};
     .typography-black{
-      color: ${({ theme }):string => theme.palette.chcBlackA};
+      color: ${({ theme }):string => theme.palette.charcoalA};
     }
   }
   .section:nth-child(2n+1) {
-    background-color: ${({ theme }):string => theme.palette.chcBlackA};
+    background-color: ${({ theme }):string => theme.palette.charcoalA};
     .typography-black {
-      color: ${({ theme }):string => theme.palette.chcWhite};
+      color: ${({ theme }):string => theme.palette.whiteA};
     }
     a {
       color: ${({ theme }): string => theme.palette.blueA};
@@ -33,15 +33,15 @@ const PageContainerV1 = styled.div`
 
 const PageContainerV2 = styled(PageContainerV1)`
   .section:nth-child(2n+1) {
-    background-color: ${({ theme }):string => theme.palette.chcWhite};
+    background-color: ${({ theme }):string => theme.palette.whiteA};
     .typography-black{
-      color: ${({ theme }):string => theme.palette.chcBlackA};
+      color: ${({ theme }):string => theme.palette.charcoalA};
     }
   }
   .section:nth-child(2n) {
-    background-color: ${({ theme }):string => theme.palette.chcBlackA};
+    background-color: ${({ theme }):string => theme.palette.charcoalA};
     .typography-black {
-      color: ${({ theme }):string => theme.palette.chcWhite};
+      color: ${({ theme }):string => theme.palette.whiteA};
     }
     a {
       color: ${({ theme }): string => theme.palette.blueA};

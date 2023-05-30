@@ -32,19 +32,12 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com"/>
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
           <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"/>
-      {/*<!-- Hotjar Tracking Code for https://www.cahyperloop.ca/ -->*/}
-      <script dangerourslySetInnerHtml={`(function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={ hjid:3071367,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}/>
         </Head>
         <body>
           <Main />

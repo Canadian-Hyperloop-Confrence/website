@@ -13,18 +13,18 @@ const Button = styled.button<Props>`
     switch(props.variant) {
       case "Secondary":
         return css`
-        color: ${props.theme.palette.chcRed};
-        background-color: ${props.theme.palette.chcWhite};
-        border-color: ${props.theme.palette.chcRed};
+        color: ${props.theme.palette.redA};
+        background-color: ${props.theme.palette.whiteA};
+        border-color: ${props.theme.palette.redA};
         padding-left: 16px;
         padding-right: 16px;
         `;
       case "Primary":
       default:
         return css`
-        color: ${props.theme.palette.chcWhite};
-        background-color: ${props.theme.palette.chcRed};
-        border-color: ${props.theme.palette.chcRed};
+        color: ${props.theme.palette.whiteA};
+        background-color: ${props.theme.palette.redA};
+        border-color: ${props.theme.palette.redA};
         padding-left: 16px;
         padding-right: 16px;
         `;

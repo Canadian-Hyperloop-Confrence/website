@@ -12,7 +12,7 @@ const OurVision = () => (
 );
 
 const StyledList = styled.ul`
-  color: ${({ theme }): string => theme.palette.chcWhite};
+  color: ${({ theme }): string => theme.palette.whiteA};
 `;
 
 const OurMission = () => (
@@ -43,7 +43,7 @@ const Container = styled.div`
   display: flex;
   ${LeftSide} {
     width: 33%;
-    border-right: 4px solid ${({ theme }): string => theme.palette.chcWhite};
+    border-right: 4px solid ${({ theme }): string => theme.palette.whiteA};
     margin-right: 16px;
     padding-right: 16px;
   }
@@ -53,7 +53,7 @@ const Container = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  background-color: ${({ theme }): string => theme.palette.chcWhite};
+  background-color: ${({ theme }): string => theme.palette.whiteA};
   height: 50px;
   width: 200px;
   border-radius: 50px;
@@ -63,8 +63,7 @@ const ButtonContainer = styled.div`
   margin-bottom: 30px;
   cursor: pointer;
   h1 {
-    color: ${({ theme }): string => theme.palette.chcBlackA};
-    font: ${({ theme }): string => theme.typography.faq.semiBold};
+    color: ${({ theme }): string => theme.palette.charcoalA};
   }
 `;
 const Button = ({onClick, children}: { onClick: () => void, children: React.ReactNode }) => (
